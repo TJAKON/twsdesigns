@@ -25,7 +25,7 @@ const services = [
 
 export default function HelpSection() {
   return (
-    <section className="bg-[#f4f0e7] py-16 px-4">
+    <section className="bg-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-light mb-4 text-gray-900 uppercase">
           How Can We Help You?

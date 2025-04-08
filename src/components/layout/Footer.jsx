@@ -13,13 +13,14 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
         {/* Left Section - Brand & About */}
         <div>
-          <Image
+          {/* <Image
             alt="TAW Designs Logo"
-            src="/logo.jpg"
+            src="/next.svg"
             width={100}
             height={100}
             className="w-40 h-auto"
-          />
+          /> */}
+          <h2 className="text-3xl font-bold mt-4">TAW DESIGNS</h2>
           <p className="text-sm mt-3">
             TAW Designs Pvt. Ltd. – Leading Pune-based architectural firm
             delivering smart, eco-friendly, and cost-effective residential and

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { X, Menu } from "lucide-react";
+import { X, Menu, ArrowBigRight } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -92,16 +92,16 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`off-canvas fixed inset-0 bg-white z-50 transform transition-transform duration-300 ${
+        className={`off-canvas fixed inset-0 bg-white z-50 h-lvh transform transition-transform duration-300 ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="off-canvas__inner p-8">
-          <div className="flex justify-between mb-8">
+        <div className="off-canvas__inner py-6 px-5 bg-black border-b-2 border-[#683e2a]">
+          <div className="flex justify-between">
             <div className="logo">
               <Link
                 href="/"
-                className="text-[#683e2a] font-serif text-2xl md:text-3xl"
+                className="text-white font-serif text-2xl md:text-3xl"
               >
                 TWS DESIGNS
               </Link>
@@ -110,12 +110,14 @@ export default function Header() {
               <X className="w-6 h-6 text-[#683e2a]" />
             </button>
           </div>
+        </div>
+        <div className="off-canvas__inner p-5">
           <nav className="off-canvas__nav">
             <ul className="space-y-6">
-              <li className={pathname === "/projects" ? "active" : ""}>
+              <li className={pathname === "/projects" ? "active" : "" }>
                 <Link
                   href="/projects"
-                  className="text-[#683e2a] text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Projects
@@ -124,7 +126,7 @@ export default function Header() {
               <li className={pathname === "/about" ? "active" : ""}>
                 <Link
                   href="/about"
-                  className="text-[#683e2a] text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   About
@@ -133,7 +135,7 @@ export default function Header() {
               <li className={pathname === "/contact" ? "active" : ""}>
                 <Link
                   href="/contact"
-                  className="text-[#683e2a] text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Contact
@@ -142,7 +144,7 @@ export default function Header() {
               <li className={pathname === "/sister" ? "active" : ""}>
                 <Link
                   href="/sister"
-                  className="text-[#683e2a] text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Store
@@ -153,9 +155,13 @@ export default function Header() {
         </div>
         <div className="off-canvas__footer absolute bottom-0 w-full p-8 bg-black">
           <div className="off-canvas__footer--inner flex justify-end">
-            <div className="logo-sister">
-              <Link href="/sister" className="text-[#463cc4] text-2xl">
-                TWS INTERIO {"-->"}
+            <div className="logo-sister w-full">
+              <Link
+                href="/sister"
+                className="text-[#463cc4] text-2xl w-full justify-between flex items-center"
+              >
+                <div><ArrowBigRight className="w-8 h-8"/></div>
+                <div>INTERIOR DESIGNS</div>
               </Link>
             </div>
           </div>

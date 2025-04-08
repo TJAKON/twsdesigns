@@ -39,7 +39,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Content */}
-      <div className="absolute z-20 inset-0 flex flex-col items-center justify-center text-center px-4 gap-6">
+      <div className="absolute z-20 top-20 inset-0 flex flex-col items-center justify-center text-center px-4 gap-6">
         <h2 className="text-3xl md:text-5xl font-bold text-red-500 tracking-tight">
           INNOVATIVE IDEAS
         </h2>
