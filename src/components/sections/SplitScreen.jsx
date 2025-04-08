@@ -41,14 +41,14 @@ export default function SplitScreen() {
         <div className="relative h-full w-full group/inner overflow-hidden">
           <Image
             src="/twsbanner.jpg"
-            alt="Sister"
+            alt="Sister" 
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center text-center bg-transparent group-hover/inner:bg-white/10 transition-all duration-500 delay-200">
             <h1 className="text-[#463cc4] text-6xl md:text-8xl font-serif tracking-wider leading-tight opacity-0 group-hover/inner:opacity-80 transition-opacity duration-700 delay-300">
-            DESIGN
+            INTERIOR DESIGN
             </h1>
           </div>
         </div>

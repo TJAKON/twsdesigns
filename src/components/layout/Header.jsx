@@ -23,7 +23,7 @@ export default function Header() {
                 href="/"
                 className="text-white font-serif text-2xl md:text-3xl"
               >
-                THE ART WORKSHOP
+                TWS DESIGNS
               </Link>
             </div>
           </div>
