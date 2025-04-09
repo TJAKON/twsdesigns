@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import Link from "next/link";
 
-const images = ["/twsbanner.jpg", "/help4.jpeg"];
+const images = ["/banners/banner4.jpg", "/banners/banner3.jpg"];
 
 const Hero = () => {
   return (

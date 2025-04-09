@@ -9,7 +9,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="bg-white text-gray-800 py-10 border-t">
+    <footer className="bg-white text-gray-800 pt-10 border-t">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
         {/* Left Section - Brand & About */}
         <div>
@@ -104,7 +104,7 @@ export const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="text-center text-sm text-gray-500 mt-8 border-t pt-4">
+      <div className="text-center text-sm bg-black text-gray-500 mt-8 border-t py-8">
         © {new Date().getFullYear()} TAW Designs Pvt. Ltd. | Smarter Layouts,
         Larger Possibilities
       </div>

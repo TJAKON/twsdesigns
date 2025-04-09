@@ -40,7 +40,7 @@ export default function SplitScreen() {
       <Link href="/sister" className="relative h-full w-full transition-all duration-700 ease-in-out group-hover:w-[30%] hover:w-[70%]">
         <div className="relative h-full w-full group/inner overflow-hidden">
           <Image
-            src="/twsbanner.jpg"
+            src="/banners/banner2.jpeg"
             alt="Sister" 
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
