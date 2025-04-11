@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header className="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md shadow-lg">
-      <div className="header__inner px-4 md:px-12 py-6">
+      <div className="header__inner px-4 md:px-12 py-8">
         <div className="flex justify-between items-baseline">
           <div className="header__col">
             <div className="logo">
@@ -30,41 +30,41 @@ export default function Header() {
           <div className="header__col hidden md:block">
             <nav>
               <ul className="flex space-x-16 uppercase text-sm ">
-                <li className={pathname === "/contact" ? "active" : ""}>
+                <li className={pathname === "/" ? "active" : ""}>
                   <Link
-                    href="/contact"
+                    href="/"
                     className="text-white hover:text-[#683e2a] transition-colors"
                   >
                     Home
                   </Link>
                 </li>
-                <li className={pathname === "/contact" ? "active" : ""}>
+                <li className={pathname === "/pages/services" ? "active" : ""}>
                   <Link
-                    href="/contact"
+                    href="/pages/services"
                     className="text-white hover:text-amber-200 transition-colors hover:underline hover:decoration-white hover:decoration-2"
                   >
                     Services
                   </Link>
                 </li>
-                <li className={pathname === "/contact" ? "active" : ""}>
+                <li className={pathname === "/pages/projects" ? "active" : ""}>
                   <Link
-                    href="/contact"
+                    href="/pages/projects"
                     className="text-white hover:text-[#683e2a] transition-colors"
                   >
                     Projects
                   </Link>
                 </li>
-                <li className={pathname === "/about" ? "active" : ""}>
+                <li className={pathname === "/pages/about" ? "active" : ""}>
                   <Link
-                    href="/about"
+                    href="/pages/about"
                     className="text-white hover:text-[#683e2a] transition-colors"
                   >
                     About
                   </Link>
                 </li>
-                <li className={pathname === "/contact" ? "active" : ""}>
+                <li className={pathname === "/pages/contact" ? "active" : ""}>
                   <Link
-                    href="/contact"
+                    href="/pages/contact"
                     className="text-white hover:text-[#683e2a] transition-colors"
                   >
                     Contact Us
@@ -85,7 +85,7 @@ export default function Header() {
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
-            <Menu className="w-6 h-6 text-[#683e2a]" />
+            <Menu className="w-6 h-6 text-white" />
           </button>
         </div>
       </div>
@@ -96,7 +96,7 @@ export default function Header() {
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="off-canvas__inner py-6 px-5 bg-black border-b-2 border-[#683e2a]">
+        <div className="off-canvas__inner py-8 px-5 bg-black border-b-2 border-[#683e2a]">
           <div className="flex justify-between">
             <div className="logo">
               <Link
@@ -114,40 +114,49 @@ export default function Header() {
         <div className="off-canvas__inner p-5">
           <nav className="off-canvas__nav">
             <ul className="space-y-6">
-              <li className={pathname === "/projects" ? "active" : "" }>
+              <li className={pathname === "/" ? "active" : "" }>
                 <Link
-                  href="/projects"
+                  href="/"
+                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
+                  onClick={toggleMobileMenu}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className={pathname === "/pages/projects" ? "active" : "" }>
+                <Link
+                  href="/pages/projects"
                   className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Projects
                 </Link>
               </li>
-              <li className={pathname === "/about" ? "active" : ""}>
+              <li className={pathname === "/pages/about" ? "active" : ""}>
                 <Link
-                  href="/about"
+                  href="/pages/about"
                   className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   About
                 </Link>
               </li>
-              <li className={pathname === "/contact" ? "active" : ""}>
+              <li className={pathname === "/pages/contact" ? "active" : ""}>
                 <Link
-                  href="/contact"
+                  href="/pages/contact"
                   className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Contact
                 </Link>
               </li>
-              <li className={pathname === "/sister" ? "active" : ""}>
+              <li className={pathname === "/pages/services" ? "active" : ""}>
                 <Link
-                  href="/sister"
+                  href="/services"
                   className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
-                  Store
+                  Services
                 </Link>
               </li>
             </ul>

@@ -40,19 +40,19 @@ const Hero = () => {
 
       {/* Content */}
       <div className="absolute z-20 top-20 inset-0 flex flex-col items-center justify-center text-center px-4 gap-6">
-        <h2 className="text-3xl md:text-5xl font-bold text-red-500 tracking-tight">
+        <h2 className="text-3xl md:text-5xl font-bold text-amber-300 tracking-tight">
           INNOVATIVE IDEAS
         </h2>
         <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
           FOR YOUR STYLE
         </h2>
         <div className="flex flex-wrap justify-center gap-4 mt-4">
-          <Link href="/projects">
+          <Link href="/pages/projects">
             <button className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold rounded-none">
               OUR PROJECT
             </button>
           </Link>
-          <Link href="/pricing">
+          <Link href="/pages/pricing">
             <button className="px-6 py-3 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 font-semibold rounded-none">
               OUR PRICING
             </button>

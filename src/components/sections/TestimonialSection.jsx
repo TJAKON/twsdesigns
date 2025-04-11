@@ -94,19 +94,19 @@ export default function TestimonialSection() {
           <h5 className="text-lg font-semibold text-gray-800 mb-6">Our Partners</h5>
           <Swiper
             modules={[Pagination, Autoplay]}
-            spaceBetween={20}
+            spaceBetween={10}
             slidesPerView={4}
-            pagination={{ clickable: true }}
+            // pagination={{ clickable: true }}
             autoplay={{ delay: 3000 }}
             loop={true}
             breakpoints={{
               640: { slidesPerView: 3 },
               768: { slidesPerView: 4 },
-              1024: { slidesPerView: 6 },
+              1024: { slidesPerView: 8 },
             }}
             className="max-w-5xl mx-auto"
           >
-            {[1, 2, 3, 4, 5, 6].map((num) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((num) => (
               <SwiperSlide key={num}>
                 <Image
                   src="/help1.jpeg"
