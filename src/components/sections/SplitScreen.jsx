@@ -21,7 +21,7 @@ export default function SplitScreen() {
       <Link href="/" className="relative h-full w-full transition-all duration-700 ease-in-out group-hover:w-[30%] hover:w-[70%]">
         <div className="relative h-full w-full group/inner overflow-hidden">
           <Image
-            src="/twsbanner.jpg"
+            src="/projects/p7.jpg"
             alt="Studio Ashby"
             fill
             priority

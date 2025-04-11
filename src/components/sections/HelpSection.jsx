@@ -4,22 +4,22 @@ const services = [
   {
     title: "ARCHITECTURAL PLANS",
     description: "Residential & Commercial Planning",
-    image: "/help1.jpeg", // replace with actual image paths
+    image: "/projects/p17.jpg", // replace with actual image paths
   },
   {
     title: "INTERIOR DESIGN",
     description: "Crafting Functional & Aesthetic Interiors",
-    image: "/help2.jpeg",
+    image: "/interior/interior5.jpeg",
   },
   {
     title: "PROJECT MANAGEMENT",
     description: "Execution & Coordination with Experts",
-    image: "/help3.jpeg",
+    image: "/help5.jpeg",
   },
   {
     title: "GREEN BUILDING DESIGN",
     description: "Sustainable & Biophilic Architecture",
-    image: "/help4.jpeg",
+    image: "/projects/p15.jpg",
   },
 ];
 
@@ -48,14 +48,14 @@ export default function HelpSection() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               {/* Title Banner */}
-              <div className="absolute top-4 left-4 bg-[#b5a474] text-white text-sm px-4 py-1 uppercase font-semibold clip-path-banner">
+              <div className="absolute top-4 left-4 bg-[#c73737] text-white text-sm px-4 py-1 uppercase font-semibold clip-path-banner">
                 {item.title}
               </div>
 
               {/* Bottom Text */}
-              <div className="absolute bottom-6 left-4 text-white">
-                <h3 className="text-xl font-light">{item.description}</h3>
-                <p className="mt-2 text-sm tracking-widest">READ MORE &gt;</p>
+              <div className="absolute bottom-6 text-white pl-4 bg-black">
+                <h3 className="text-xl font-light text-white bg-black">{item.description}</h3>
+                <p className="mt-2 text-smtracking-widest">READ MORE &gt;</p>
               </div>
             </div>
           ))}
