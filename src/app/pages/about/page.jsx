@@ -56,7 +56,7 @@ export default function Page() {
       >
         <div className="relative aspect-square md:aspect-video rounded-lg overflow-hidden shadow-md">
           <Image
-            src="/help1.jpeg" // Make sure to add this image in /public
+            src="/banners/i5.jpeg" // Make sure to add this image in /public
             alt="TAW Designs office"
             layout="fill"
             objectFit="cover"
