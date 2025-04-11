@@ -9,7 +9,7 @@ const services = [
   {
     title: "INTERIOR DESIGN",
     description: "Crafting Functional & Aesthetic Interiors",
-    image: "/interior/i5.jpeg",
+    image: "/banners/i5.jpeg",
   },
   {
     title: "PROJECT MANAGEMENT",
