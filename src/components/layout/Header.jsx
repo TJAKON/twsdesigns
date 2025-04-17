@@ -4,6 +4,77 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { X, Menu, ArrowBigRight } from "lucide-react";
+import {
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
+const services = [
+  {
+    id: 1,
+    name: "Architectural Design",
+    description: "Conceptual and detailed architectural planning.",
+    link: "/",
+    // icon: <YourIconComponent />,
+  },
+  {
+    id: 2,
+    name: "Interior Design",
+    description: "Creative and functional interior solutions.",
+    link: "/",
+    // icon: <YourIconComponent />,
+  },
+  // Add more...
+];
+
+const premiumservices = [
+  {
+    name: "Modern Luxury",
+    description: "Elegant, minimal designs with high-end finishes.",
+    href: "/styles/modern-luxury",
+  },
+  {
+    name: "Classic Royal",
+    description: "Heritage-inspired interiors with rich detail.",
+    href: "/styles/classic-royal",
+  },
+  // Add more styles...
+];
+
+const callsToAction = [
+  {
+    name: "Book Consultation",
+    href: "/contact",
+    // icon: CalendarIcon,
+  },
+  {
+    name: "Get Quote",
+    href: "/quote",
+    // icon: CurrencyRupeeIcon,
+  },
+];
+
+const navigation = [
+  { name: "About", href: "/pages/about" },
+  { name: "Projects", href: "/pages/projects" },
+  { name: "Contact", href: "/pages/contact" },
+];
+
+// const callsToAction = [
+//   {
+//     name: "Contact Us",
+//     href: "/contact",
+//     icon: ChevronDownIcon, // Or your custom icon
+//   },
+//   {
+//     name: "Book Consultation",
+//     href: "/book",
+//     icon: ChevronDownIcon,
+//   },
+// ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,48 +100,75 @@ export default function Header() {
           </div>
           <div className="header__col hidden md:block">
             <nav>
-              <ul className="flex space-x-16 uppercase text-sm ">
-                <li className={pathname === "/" ? "active" : ""}>
-                  <Link
-                    href="/"
-                    className="text-white hover:text-[#683e2a] transition-colors"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li className={pathname === "/pages/services" ? "active" : ""}>
-                  <Link
-                    href="/pages/services"
-                    className="text-white hover:text-amber-200 transition-colors hover:underline hover:decoration-white hover:decoration-2"
-                  >
+              <PopoverGroup className="hidden lg:flex lg:gap-x-8 text-lg font-medium">
+                <Link href="/" className="text-white uppercase">
+                  Home
+                </Link>
+                <Popover className="relative group">
+                  <PopoverButton className="flex items-center gap-x-1 text-white focus:outline-none uppercase">
                     Services
-                  </Link>
-                </li>
-                <li className={pathname === "/pages/projects" ? "active" : ""}>
+                    <ChevronDownIcon className="h-5 w-5" />
+                  </PopoverButton>
+
+                  <PopoverPanel className="absolute top-12 z-10 mt-3 md:w-[80vh] overflow-hidden rounded-xl bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 px-4 py-4">
+                      {premiumservices.map((item) => (
+                        <div
+                          key={item.name}
+                          className="flex flex-col items-center justify-center rounded-xl py-6 px-4 bg-white text-black hover:text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-emerald-800"
+                        >
+                          {item.href ? (
+                            <Link
+                              href={item.href}
+                              className="text-xl font-semibold text-center transition-colors duration-200"
+                            >
+                              {item.name}
+                              <p className="mt-2 text-center text-sm">
+                                {item.description}
+                              </p>
+                            </Link>
+                          ) : (
+                            <div className="text-xl font-semibold text-center opacity-60 cursor-not-allowed">
+                              {item.name}
+                              <p className="mt-2 text-center text-sm">
+                                {item.description}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+
+                    {callsToAction.length > 0 && (
+                      <div className="grid grid-cols-2 divide-x divide-gray-200 bg-white/50 backdrop-blur-sm">
+                        {callsToAction.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-center text-black hover:text-white justify-center gap-x-3 p-4 text-xl font-semibold hover:bg-black transition-colors duration-200"
+                          >
+                            {/* <item.icon
+              className="w-8 h-8 text-white"
+              aria-hidden="true"
+            /> */}
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </PopoverPanel>
+                </Popover>
+
+                {navigation.map((item) => (
                   <Link
-                    href="/pages/projects"
-                    className="text-white hover:text-[#683e2a] transition-colors"
+                    key={item.name}
+                    href={item.href}
+                    className="text-white uppercase"
                   >
-                    Projects
+                    {item.name}
                   </Link>
-                </li>
-                <li className={pathname === "/pages/about" ? "active" : ""}>
-                  <Link
-                    href="/pages/about"
-                    className="text-white hover:text-[#683e2a] transition-colors"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className={pathname === "/pages/contact" ? "active" : ""}>
-                  <Link
-                    href="/pages/contact"
-                    className="text-white hover:text-[#683e2a] transition-colors"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
+                ))}
+              </PopoverGroup>
             </nav>
           </div>
           {/* <div className="header__col flex items-center">
@@ -114,7 +212,7 @@ export default function Header() {
         <div className="off-canvas__inner p-5">
           <nav className="off-canvas__nav">
             <ul className="space-y-6">
-              <li className={pathname === "/" ? "active" : "" }>
+              <li className={pathname === "/" ? "active" : ""}>
                 <Link
                   href="/"
                   className="text-black text-2xl hover:text-[#a99115] transition-colors"
@@ -123,7 +221,7 @@ export default function Header() {
                   Home
                 </Link>
               </li>
-              <li className={pathname === "/pages/projects" ? "active" : "" }>
+              <li className={pathname === "/pages/projects" ? "active" : ""}>
                 <Link
                   href="/pages/projects"
                   className="text-black text-2xl hover:text-[#a99115] transition-colors"
@@ -152,7 +250,7 @@ export default function Header() {
               </li>
               <li className={pathname === "/pages/services" ? "active" : ""}>
                 <Link
-                  href="/services"
+                  href="/pages/services"
                   className="text-black text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
@@ -162,7 +260,7 @@ export default function Header() {
             </ul>
           </nav>
         </div>
-        <div className="off-canvas__footer absolute bottom-0 w-full p-8 bg-black">
+        {/* <div className="off-canvas__footer absolute bottom-0 w-full p-8 bg-black">
           <div className="off-canvas__footer--inner flex justify-end">
             <div className="logo-sister w-full">
               <Link
@@ -174,7 +272,7 @@ export default function Header() {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );
