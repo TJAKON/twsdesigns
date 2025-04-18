@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function InteriorDesignSection() {
   return (
-    <section className="py-12 md:py-20 bg-white px-4">
+    <section className="py-12 md:py-20 bg-[#0A0A0A] text-[#F8F8F8] px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -16,28 +16,28 @@ export default function InteriorDesignSection() {
             viewport={{ once: true }}
             className="space-y-5"
           >
-            <h5 className="text-[#e0b378] font-semibold text-sm md:text-base uppercase tracking-wide">
+            <h5 className="text-[#D4AF37] font-semibold text-sm md:text-base uppercase tracking-wide">
               Discover TAW Designs
             </h5>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#F8F8F8] leading-snug">
               Exceptional Interior Design Solutions
             </h2>
-            <p className="text-gray-600 text-sm md:text-base">
+            <p className="text-[#C0C0C0] text-sm md:text-base">
               At TAW Designs Pvt. Ltd., we blend creativity with functionality to craft interior spaces
               that inspire. From residential to commercial projects, our expert team ensures every detail
               reflects your vision, lifestyle, and purpose.
             </p>
 
             <div>
-              <h5 className="text-[#e0b378] font-semibold text-base mb-1">Innovative Concepts</h5>
-              <p className="text-gray-600 text-sm md:text-base">
+              <h5 className="text-[#D4AF37] font-semibold text-base mb-1">Innovative Concepts</h5>
+              <p className="text-[#C0C0C0] text-sm md:text-base">
                 We redefine spaces with modern, trendsetting designs rooted in innovation and smart space utilization.
               </p>
             </div>
 
             <div>
-              <h5 className="text-[#e0b378] font-semibold text-base mb-1">Tailored Aesthetics</h5>
-              <p className="text-gray-600 text-sm md:text-base">
+              <h5 className="text-[#D4AF37] font-semibold text-base mb-1">Tailored Aesthetics</h5>
+              <p className="text-[#C0C0C0] text-sm md:text-base">
                 Every project we handle is unique. Our team collaborates closely with clients to ensure the interiors
                 align with their personal tastes and professional needs.
               </p>
@@ -52,12 +52,17 @@ export default function InteriorDesignSection() {
             viewport={{ once: true }}
             className="grid grid-cols-2 gap-4"
           >
-            {[["help1.jpeg", "help2.jpeg"], ["help3.jpeg", "help4.jpeg"]].map((col, colIndex) => (
+            {["help1.jpeg", "help2.jpeg", "help3.jpeg", "help4.jpeg"].reduce((acc, curr, i) => {
+              const col = Math.floor(i / 2);
+              acc[col] = acc[col] || [];
+              acc[col].push(curr);
+              return acc;
+            }, []).map((col, colIndex) => (
               <div key={colIndex} className="flex flex-col gap-4">
                 {col.map((img, i) => (
                   <div
                     key={img}
-                    className="overflow-hidden shadow-sm"
+                    className="overflow-hidden shadow-sm border border-[#C0C0C0]"
                   >
                     <a href={`/${img}`} data-fslightbox="gallery-1">
                       <Image

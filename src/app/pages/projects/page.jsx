@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -127,91 +128,84 @@ const projects = [
 
 function page() {
   return (
-<section className="py-16 px-4 mt-20 bg-white">
-  {/* Banner Section */}
-  <motion.div
-    className="bg-[#3a4d6b] text-white py-16 md:py-20"
-    initial={{ opacity: 0, y: -40 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-  >
-    <div className="max-w-7xl mx-auto text-center px-4">
-      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-        Transform Your Space with Expert Interior Design
-      </h1>
-      <p className="mt-4 text-lg md:text-xl lg:text-2xl font-medium">
-        Discover how we bring your vision to life with our exceptional
-        design solutions. From residential to commercial, we specialize in
-        creating spaces that inspire and function seamlessly.
-      </p>
-    </div>
+    <section className="py-16 px-4 mt-20 bg-[#0A0A0A] text-[#F8F8F8]">
+      <motion.div
+        className="bg-[#1F1F1F] text-[#F8F8F8] py-16 md:py-20"
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="max-w-7xl mx-auto text-center px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+            Transform Your Space with Expert Interior Design
+          </h1>
+          <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-[#C0C0C0]">
+            Discover how we bring your vision to life with our exceptional design solutions.
+          </p>
+        </div>
 
-    <div className="mt-12 flex justify-center gap-8 md:gap-12 text-base md:text-lg text-[#a8c1d1] flex-wrap">
-      <div className="flex items-center space-x-2 mb-4 md:mb-0">
-        <span className="font-semibold">Residential Design</span>
-        <span className="text-white">|</span>
-        <span>Luxury Villas, Apartments, and more</span>
-      </div>
-      <div className="flex items-center space-x-2 mb-4 md:mb-0">
-        <span className="font-semibold">Commercial Design</span>
-        <span className="text-white">|</span>
-        <span>Offices, Retail, Hospitality</span>
-      </div>
-      <div className="flex items-center space-x-2 mb-4 md:mb-0">
-        <span className="font-semibold">Custom Solutions</span>
-        <span className="text-white">|</span>
-        <span>Personalized designs for every need</span>
-      </div>
-    </div>
-  </motion.div>
-
-  <div className="max-w-7xl mx-auto mt-12">
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center uppercase tracking-wider">
-      Our Projects
-    </h2>
-
-    <div className="space-y-12">
-      {projects.map((project, idx) => (
-        <motion.div
-          key={idx}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: idx * 0.1 }}
-          viewport={{ once: true }}
-          className={`flex ${idx % 2 === 0 ? "flex-row-reverse" : "flex-row"} items-center gap-8`}
-        >
-          {/* Project Image */}
-          <div className="w-full md:w-1/2">
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={600}
-              height={400}
-              className="w-full h-[400px] md:h-[500px] object-cover rounded-lg shadow-lg"
-            />
+        <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-12 text-sm sm:text-base md:text-lg text-[#C0C0C0] text-center px-4">
+          <div className="flex items-center space-x-2">
+            <span className="font-semibold text-[#D4AF37]">Residential Design</span>
+            <span className="text-[#F8F8F8]">|</span>
+            <span>Luxury Villas, Apartments, and more</span>
           </div>
-
-          {/* Project Content */}
-          <div className="w-full md:w-1/2 space-y-4 text-center md:text-left">
-            <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
-            <p className="text-sm text-gray-600">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
-              {project.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="text-xs bg-[#e0b378] text-white px-2 py-1 rounded-full"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+          <div className="flex items-center space-x-2">
+            <span className="font-semibold text-[#D4AF37]">Commercial Design</span>
+            <span className="text-[#F8F8F8]">|</span>
+            <span>Offices, Retail, Hospitality</span>
           </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+          <div className="flex items-center space-x-2">
+            <span className="font-semibold text-[#D4AF37]">Custom Solutions</span>
+            <span className="text-[#F8F8F8]">|</span>
+            <span>Personalized designs for every need</span>
+          </div>
+        </div>
+      </motion.div>
 
+      <div className="max-w-7xl mx-auto mt-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center uppercase tracking-wider">
+          Our Projects
+        </h2>
+
+        <div className="space-y-12">
+          {projects.map((project, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              viewport={{ once: true }}
+              className={`flex ${idx % 2 === 0 ? "flex-row-reverse" : "flex-row"} items-center gap-8`}
+            >
+              <div className="w-full md:w-1/2">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-[400px] md:h-[500px] object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="w-full md:w-1/2 space-y-4 text-center md:text-left">
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <p className="text-sm text-[#C0C0C0]">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="text-xs bg-[#D4AF37] text-[#0A0A0A] px-2 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

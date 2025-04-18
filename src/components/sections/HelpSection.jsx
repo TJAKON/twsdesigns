@@ -4,7 +4,7 @@ const services = [
   {
     title: "ARCHITECTURAL PLANS",
     description: "Residential & Commercial Planning",
-    image: "/projects/p17.jpg", // replace with actual image paths
+    image: "/projects/p17.jpg",
   },
   {
     title: "INTERIOR DESIGN",
@@ -25,12 +25,12 @@ const services = [
 
 export default function HelpSection() {
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-[#0A0A0A] py-16 px-4 text-[#F8F8F8]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-light mb-4 text-gray-900 uppercase">
+        <h2 className="text-4xl font-light mb-4 uppercase">
           How Can We Help You?
         </h2>
-        <p className="text-gray-700 mb-12 max-w-3xl leading-relaxed">
+        <p className="text-[#C0C0C0] mb-12 max-w-3xl leading-relaxed">
           At TAW Designs Pvt. Ltd., we specialize in smart, sustainable design solutions.
           From residential layouts to eco-conscious green buildings, we help you navigate
           your architectural journey with creativity, efficiency, and precision.
@@ -40,7 +40,7 @@ export default function HelpSection() {
           {services.map((item, index) => (
             <div
               key={index}
-              className="relative h-[450px] overflow-hidden group shadow-md"
+              className="relative h-[450px] overflow-hidden group shadow-md border border-[#C0C0C0]"
             >
               <img
                 src={item.image}
@@ -48,14 +48,14 @@ export default function HelpSection() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               {/* Title Banner */}
-              <div className="absolute top-4 left-4 bg-[#c73737] text-white text-sm px-4 py-1 uppercase font-semibold clip-path-banner">
+              <div className="absolute top-4 left-4 bg-[#D4AF37] text-[#0A0A0A] text-sm px-4 py-1 uppercase font-semibold clip-path-banner">
                 {item.title}
               </div>
 
               {/* Bottom Text */}
-              <div className="absolute bottom-6 text-white pl-4 bg-black">
-                <h3 className="text-xl font-light text-white bg-black">{item.description}</h3>
-                <p className="mt-2 text-smtracking-widest">READ MORE &gt;</p>
+              <div className="absolute bottom-6 text-[#F8F8F8] pl-4 bg-[#1F1F1F] bg-opacity-80 w-full py-4">
+                <h3 className="text-md font-medium">{item.description}</h3>
+                <p className="mt-1 text-sm tracking-wider text-[#C0C0C0]">READ MORE &gt;</p>
               </div>
             </div>
           ))}

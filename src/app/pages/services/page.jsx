@@ -77,19 +77,19 @@ function page() {
         </div>
       </motion.section>
 
-      {/* Detailed Services Section */}
-      <motion.section
-        className="py-20 bg-white"
+           {/* Services Feature Cards */}
+           <motion.section
+        className="py-20 bg-[#0A0A0A] text-[#F8F8F8]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
         <div className="max-w-screen-xl mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4 text-black">
+          <h2 className="text-3xl lg:text-4xl font-bold text-center mb-4 text-[#F8F8F8]">
             Our Services
           </h2>
-          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-base lg:text-lg">
+          <p className="text-center text-[#C0C0C0] max-w-2xl mx-auto mb-12 text-base lg:text-lg">
             With a multidisciplinary team of experts, we provide a full spectrum
             of architectural, interior, and sustainable design services tailored
             to meet the unique vision of each client.
@@ -139,15 +139,15 @@ function page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="bg-[#1F1F1F] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <h3 className="text-xl lg:text-2xl font-semibold text-yellow-600 mb-1">
+                <h3 className="text-xl lg:text-2xl font-semibold text-[#D4AF37] mb-1">
                   {index + 1}. {service.title}
                 </h3>
-                <p className="text-gray-700 text-sm lg:text-base mb-4">
+                <p className="text-[#C0C0C0] text-sm lg:text-base mb-4">
                   {service.subtitle}
                 </p>
-                <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4 text-sm lg:text-base">
+                <ul className="list-disc list-inside text-[#C0C0C0] space-y-1 ml-4 text-sm lg:text-base">
                   {service.bullets.map((bullet, i) => (
                     <li key={i}>{bullet}</li>
                   ))}
@@ -158,9 +158,10 @@ function page() {
         </div>
       </motion.section>
 
+
       {/* Services Feature Cards */}
       <motion.section
-        className="py-20 bg-gray-100"
+        className="py-20 bg-[#1F1F1F] text-[#F8F8F8]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -193,7 +194,9 @@ function page() {
               <motion.div
                 key={i}
                 className={`text-center p-6 ${
-                  i === 0 ? "bg-black text-white" : "border bg-white text-black"
+                  i === 0
+                    ? "bg-[#0A0A0A] text-[#F8F8F8]"
+                    : "border border-[#C0C0C0] bg-[#1F1F1F] text-[#F8F8F8]"
                 } rounded-lg shadow-md`}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -204,7 +207,7 @@ function page() {
                   className="mx-auto mb-4 w-12 h-12 object-cover rounded-full shadow-sm"
                 />
                 <h5 className="font-semibold">{service.title}</h5>
-                <p className="text-sm mt-2 text-gray-500">
+                <p className="text-sm mt-2 text-[#C0C0C0]">
                   {service.description}
                 </p>
               </motion.div>
@@ -218,25 +221,25 @@ function page() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h5 className="text-yellow-500 font-semibold uppercase">
+            <h5 className="text-[#D4AF37] font-semibold uppercase">
               Our Services
             </h5>
-            <h2 className="text-3xl font-bold mt-2 text-black leading-snug">
+            <h2 className="text-3xl font-bold mt-2 leading-snug">
               Timeless Design Meets Modern Elegance
             </h2>
-            <p className="text-gray-600 mt-4 leading-relaxed">
+            <p className="text-[#C0C0C0] mt-4 leading-relaxed">
               We are dedicated to creating visually captivating and functionally
               efficient interiors. From concept development to execution, our
               team ensures each project reflects your personality while
               enhancing comfort, space, and sophistication.
             </p>
-            <p className="text-gray-600 mt-4 leading-relaxed">
+            <p className="text-[#C0C0C0] mt-4 leading-relaxed">
               Whether it's transforming residential spaces or optimizing
               commercial interiors, our approach is rooted in design excellence,
               precision craftsmanship, and a deep understanding of client needs.
             </p>
             <motion.button
-              className="mt-6 bg-black text-white px-6 py-3 uppercase font-semibold rounded-md shadow-md hover:bg-yellow-500 hover:text-black transition-all duration-300 w-max"
+              className="mt-6 bg-[#D4AF37] text-[#0A0A0A] px-6 py-3 uppercase font-semibold rounded-md shadow-md hover:bg-[#F8F8F8] hover:text-[#0A0A0A] transition-all duration-300 w-max"
               whileTap={{ scale: 0.95 }}
             >
               Contact Us
@@ -247,7 +250,7 @@ function page() {
 
       {/* Work Process Section */}
       <motion.section
-        className="py-20"
+        className="py-20 bg-[#0A0A0A] text-[#F8F8F8]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -261,11 +264,11 @@ function page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h5 className="text-yellow-500 font-semibold">HOW DO WE WORK ?</h5>
-            <h2 className="text-3xl font-bold mt-2 text-black">
+            <h5 className="text-[#D4AF37] font-semibold">HOW DO WE WORK ?</h5>
+            <h2 className="text-3xl font-bold mt-2">
               WE DESIGN FOR YOUR SATISFACTION
             </h2>
-            <p className="text-gray-500 mt-4">
+            <p className="text-[#C0C0C0] mt-4">
               Our streamlined process ensures transparency, creativity, and
               precision at every stage. We collaborate closely with clients to
               deliver tailored solutions that exceed expectations.
@@ -290,15 +293,15 @@ function page() {
             ].map((step, i) => (
               <motion.div
                 key={i}
-                className="flex items-start gap-6 py-4 border-b"
+                className="flex items-start gap-6 py-4 border-b border-[#C0C0C0]"
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -20 }}
                 transition={{ delay: i * 0.2, duration: 0.6 }}
               >
-                <h3 className="text-yellow-500 font-bold text-xl">0{i + 1}</h3>
+                <h3 className="text-[#D4AF37] font-bold text-xl">0{i + 1}</h3>
                 <div>
-                  <h6 className="font-semibold text-black">{step.title}</h6>
-                  <p className="text-sm text-gray-500">{step.description}</p>
+                  <h6 className="font-semibold">{step.title}</h6>
+                  <p className="text-sm text-[#C0C0C0]">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -340,11 +343,11 @@ function page() {
                   alt={service.title}
                   className="w-full mb-2 rounded-md"
                 />
-                <div className="shadow-md p-4 text-center rounded-md bg-white">
-                  <h6 className="text-yellow-500 font-semibold">
+                <div className="shadow-md p-4 text-center rounded-md bg-[#1F1F1F]">
+                  <h6 className="text-[#D4AF37] font-semibold">
                     {service.title}
                   </h6>
-                  <p className="text-sm text-gray-500 mt-1">
+                  <p className="text-sm text-[#C0C0C0] mt-1">
                     {service.description}
                   </p>
                 </div>
@@ -355,7 +358,7 @@ function page() {
       </motion.section>
 
       <motion.section
-        className="bg-yellow-500 text-black py-16 text-center relative overflow-hidden"
+        className="bg-accent text-black py-16 text-center relative overflow-hidden"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

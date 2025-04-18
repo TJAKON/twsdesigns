@@ -85,22 +85,27 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-md shadow-lg">
-      <div className="header__inner px-4 md:px-12 py-8">
-        <div className="flex justify-between items-baseline">
-          <div className="header__col">
-            <div className="logo">
-              <Link
-                href="/"
-                className="text-white font-serif text-2xl md:text-3xl"
-              >
-                TAW DESIGNS
+    <header className="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md shadow-lg">
+      <div className="header__inner px-4 md:px-12">
+        <div className="flex justify-between items-center">
+          <div className="header__col py-2 md:py-0">
+            <div className="logo f">
+              <Link href="/" className="flex items-center">
+                <img
+                  src="/logo1.png"
+                  alt="TAW Designs Logo"
+                  className="w-auto h-16 md:h-24"
+                />
+                <span className="text-md md:text-2xl bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent leading-tight">
+                  TAW <br /> DESIGNS
+                </span>
               </Link>
             </div>
           </div>
+
           <div className="header__col hidden md:block">
             <nav>
-              <PopoverGroup className="hidden lg:flex lg:gap-x-8 text-lg font-medium">
+              <PopoverGroup className="hidden lg:flex lg:gap-x-8 text-md font-medium">
                 <Link href="/" className="text-white uppercase">
                   Home
                 </Link>
@@ -190,22 +195,26 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`off-canvas fixed inset-0 bg-white z-50 h-lvh transform transition-transform duration-300 ${
+        className={`off-canvas fixed inset-0 bg-black z-50 h-lvh transform transition-transform duration-300 ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="off-canvas__inner py-8 px-5 bg-black border-b-2 border-[#683e2a]">
+        <div className="off-canvas__inner py-2 px-5 bg-black border-b-2 border-[#683e2a]">
           <div className="flex justify-between">
             <div className="logo">
-              <Link
-                href="/"
-                className="text-white font-serif text-2xl md:text-3xl"
-              >
-                TWS DESIGNS
+            <Link href="/" className="flex items-center">
+                <img
+                  src="/logo1.png"
+                  alt="TAW Designs Logo"
+                  className="w-auto h-16 md:h-24"
+                />
+                <span className="text-md md:text-2xl bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent leading-tight">
+                  TAW <br /> DESIGNS
+                </span>
               </Link>
             </div>
             <button onClick={toggleMobileMenu} aria-label="Close menu">
-              <X className="w-6 h-6 text-[#683e2a]" />
+              <X className="w-6 h-6 text-white" />
             </button>
           </div>
         </div>
@@ -215,7 +224,7 @@ export default function Header() {
               <li className={pathname === "/" ? "active" : ""}>
                 <Link
                   href="/"
-                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Home
@@ -224,7 +233,7 @@ export default function Header() {
               <li className={pathname === "/pages/projects" ? "active" : ""}>
                 <Link
                   href="/pages/projects"
-                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Projects
@@ -233,7 +242,7 @@ export default function Header() {
               <li className={pathname === "/pages/about" ? "active" : ""}>
                 <Link
                   href="/pages/about"
-                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   About
@@ -242,7 +251,7 @@ export default function Header() {
               <li className={pathname === "/pages/contact" ? "active" : ""}>
                 <Link
                   href="/pages/contact"
-                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Contact
@@ -251,7 +260,7 @@ export default function Header() {
               <li className={pathname === "/pages/services" ? "active" : ""}>
                 <Link
                   href="/pages/services"
-                  className="text-black text-2xl hover:text-[#a99115] transition-colors"
+                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
                   onClick={toggleMobileMenu}
                 >
                   Services
