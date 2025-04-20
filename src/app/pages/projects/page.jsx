@@ -130,7 +130,7 @@ function page() {
   return (
     <section className="py-16 px-4 mt-20 bg-secondary/40 text-[#F8F8F8]">
       <motion.div
-        className="bg-secondary text-black py-16 md:py-20"
+        className="bg-secondary text-black py-8 md:py-20"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -140,23 +140,30 @@ function page() {
             Transform Your Space with Expert Interior Design
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-[#C0C0C0]">
-            Discover how we bring your vision to life with our exceptional design solutions.
+            Discover how we bring your vision to life with our exceptional
+            design solutions.
           </p>
         </div>
 
-        <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-12 text-sm sm:text-base md:text-lg text-[#C0C0C0] text-center px-4">
+        <div className="mt-12 flex flex-col md:flex-row justify-left md:justify-center items-center gap-4 sm:gap-6 md:gap-12 text-sm sm:text-base md:text-lg text-[#C0C0C0] text-left md:text-center px-4">
           <div className="flex items-center space-x-2">
-            <span className="font-semibold text-[#D4AF37]">Residential Design</span>
+            <span className="font-semibold text-[#D4AF37]">
+              Residential Design
+            </span>
             <span className="text-[#F8F8F8]">|</span>
             <span>Luxury Villas, Apartments, and more</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="font-semibold text-[#D4AF37]">Commercial Design</span>
+            <span className="font-semibold text-[#D4AF37]">
+              Commercial Design
+            </span>
             <span className="text-[#F8F8F8]">|</span>
-            <span>Offices, Retail, Hospitality</span>
+            <span>Offices, Retail, Hospitality and more</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="font-semibold text-[#D4AF37]">Custom Solutions</span>
+            <span className="font-semibold text-[#D4AF37]">
+              Custom Solutions
+            </span>
             <span className="text-[#F8F8F8]">|</span>
             <span>Personalized designs for every need</span>
           </div>
@@ -176,25 +183,29 @@ function page() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className={`flex ${idx % 2 === 0 ? "flex-row-reverse bg-foreground text-secondary" : "flex-row bg-black text-foreground"} items-center gap-8`}
+              className={`flex ${
+                idx % 2 === 0 ? "flex-row-reverse" : "flex-row"
+              } items-center gap-2 md:gap-8`}
             >
-              <div className="w-full md:w-1/2">
+              <div className="w-full md:w-1/2 overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={600}
                   height={400}
-                  className="w-full h-[400px] md:h-[500px] object-cover rounded-lg shadow-lg"
+                  className="w-full h-[320px] md:h-[500px] object-contain md:object-fill rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <div className="w-full md:w-1/2 space-y-4 px-4 text-center md:text-left">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="text-sm">{project.description}</p>
+              <div className="w-full md:w-1/2 space-y-4 px-0 md:px-4 text-center md:text-left">
+                <h3 className=" text-lg md:text-xl font-semibold">
+                  {project.title}
+                </h3>
+                <p className="text-xs md:text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-[#D4AF37] text-[#0A0A0A] px-2 py-1 rounded-full"
+                      className="text-xs bg-accent text-[#0A0A0A] px-2 py-1 rounded-full"
                     >
                       {tag}
                     </span>

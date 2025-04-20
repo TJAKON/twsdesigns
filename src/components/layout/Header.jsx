@@ -68,9 +68,9 @@ const callsToAction = [
 ];
 
 const navigation = [
-  { name: "About", href: "/pages/about" },
   { name: "Projects", href: "/pages/projects" },
-  { name: "Contact", href: "/pages/contact" },
+  { name: "About", href: "/pages/about" },
+  { name: "Contact Us", href: "/pages/contact" },
 ];
 
 // const callsToAction = [
@@ -125,12 +125,12 @@ export default function Header() {
                     <ChevronDownIcon className="h-5 w-5" />
                   </PopoverButton>
 
-                  <PopoverPanel className="absolute top-12 z-10 mt-3 md:w-[60vh] overflow-hidden rounded-xl bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                  <PopoverPanel className="absolute top-12 z-10 mt-3 md:w-[40vh] overflow-hidden bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 px-3 py-3">
                       {premiumservices.map((item) => (
                         <div
                           key={item.name}
-                          className="flex flex-col items-center justify-center rounded-xl py-2 px-2 bg-white text-black hover:text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-secondary"
+                          className="flex flex-col items-center justify-center py-2 px-2 bg-white text-black hover:text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-secondary"
                         >
                           {item.href ? (
                             <Link
@@ -160,7 +160,7 @@ export default function Header() {
                           <Link
                             key={item.name}
                             href={item.href}
-                            className="flex items-center text-black hover:text-white justify-center gap-x-3 p-4 text-xl font-semibold hover:bg-black transition-colors duration-200"
+                            className="flex items-center text-center text-black hover:text-white justify-center gap-x-3 p-1 text-md font-semibold hover:bg-black transition-colors duration-200"
                           >
                             {/* <item.icon
               className="w-8 h-8 text-white"

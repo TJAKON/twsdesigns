@@ -105,8 +105,8 @@ export default function TestimonialSection() {
         </motion.div>
 
         {/* Testimonials */}
-        <div className="w-full max-w-7xl mx-auto px-4 py-16">
-          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-10">
+        <div className="w-full max-w-7xl mx-auto px-4 py-2 md:py-16">
+          <h2 className="text-3xl font-semibold text-center text-gray-800 mb-10 uppercase">
             Client Testimonials
           </h2>
           <Swiper
@@ -166,7 +166,7 @@ export default function TestimonialSection() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h5 className="text-lg font-semibold text-gray-800 mb-6">
+          <h5 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 uppercase">
             Our Partners
           </h5>
           <Swiper
@@ -189,7 +189,7 @@ export default function TestimonialSection() {
                   alt={partner.name}
                   width={100}
                   height={60}
-                  className="object-contain mx-auto"
+                  className="w-full h-24 object-contain mx-auto"
                 />
               </SwiperSlide>
             ))}
