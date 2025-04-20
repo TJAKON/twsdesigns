@@ -45,7 +45,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Main Content - Bottom Left */}
-      <div className="absolute z-20 bottom-52 left-8 text-center md:bottom-28 md:left-10 md:text-left px-4 max-w-xl space-y-4">
+      <div className="absolute z-20 bottom-80 left-8 text-center md:bottom-28 md:left-10 md:text-left px-4 max-w-xl space-y-4">
         <h2 className="text-3xl md:text-5xl font-bold text-amber-300 uppercase">
           Smarter Layouts
         </h2>
@@ -54,12 +54,12 @@ const Hero = () => {
         </h2>
         <div className="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">
           <Link href="/pages/projects">
-            <button className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold rounded-none">
+            <button className=" px-3 py-2 md:px-6 md:py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold rounded-none">
               OUR PROJECT
             </button>
           </Link>
           <Link href="/pages/contact">
-            <button className="px-6 py-3 border border-red-500 text-amber-300 hover:bg-red-500 hover:text-white transition-all duration-300 font-semibold rounded-none">
+            <button className="px-3 py-2 md:px-6 md:py-3 border border-red-500 text-amber-300 hover:bg-red-500 hover:text-white transition-all duration-300 font-semibold rounded-none">
               OUR PRICING
             </button>
           </Link>

@@ -194,7 +194,7 @@ export default function Header() {
             </div>
           </div> */}
           <button
-            className="header__hamburger md:hidden"
+            className="header__hamburger lg:hidden"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
