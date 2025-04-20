@@ -12,6 +12,7 @@
   --font-geist-mono: "Geist Mono", monospace;
 }
 
+
 @theme inline {
   --color-background: var(--color-primary);
   --color-foreground: var(--color-text);

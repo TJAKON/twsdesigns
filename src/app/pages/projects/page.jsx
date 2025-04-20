@@ -128,15 +128,15 @@ const projects = [
 
 function page() {
   return (
-    <section className="py-16 px-4 mt-20 bg-[#0A0A0A] text-[#F8F8F8]">
+    <section className="py-16 px-4 mt-20 bg-secondary/40 text-[#F8F8F8]">
       <motion.div
-        className="bg-[#1F1F1F] text-[#F8F8F8] py-16 md:py-20"
+        className="bg-secondary text-black py-16 md:py-20"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto text-center px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-foreground">
             Transform Your Space with Expert Interior Design
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-[#C0C0C0]">
@@ -176,7 +176,7 @@ function page() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className={`flex ${idx % 2 === 0 ? "flex-row-reverse" : "flex-row"} items-center gap-8`}
+              className={`flex ${idx % 2 === 0 ? "flex-row-reverse bg-foreground text-secondary" : "flex-row bg-black text-foreground"} items-center gap-8`}
             >
               <div className="w-full md:w-1/2">
                 <Image
@@ -187,9 +187,9 @@ function page() {
                   className="w-full h-[400px] md:h-[500px] object-cover rounded-lg shadow-lg"
                 />
               </div>
-              <div className="w-full md:w-1/2 space-y-4 text-center md:text-left">
+              <div className="w-full md:w-1/2 space-y-4 px-4 text-center md:text-left">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="text-sm text-[#C0C0C0]">{project.description}</p>
+                <p className="text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
                   {project.tags.map((tag, i) => (
                     <span

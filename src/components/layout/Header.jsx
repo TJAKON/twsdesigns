@@ -32,17 +32,27 @@ const services = [
 
 const premiumservices = [
   {
-    name: "Modern Luxury",
-    description: "Elegant, minimal designs with high-end finishes.",
-    href: "/styles/modern-luxury",
+    name: "Architectural Plans",
+    description: "Tailored residential and commercial building plans with precision.",
+    href: "/pages/services",
   },
   {
-    name: "Classic Royal",
-    description: "Heritage-inspired interiors with rich detail.",
-    href: "/styles/classic-royal",
+    name: "Planning & Designing",
+    description: "Comprehensive site planning, project layout, and sanctioned drawings.",
+    href: "/pages/services",
   },
-  // Add more styles...
+  {
+    name: "Project Management",
+    description: "From 3D visualizations to commercial and landscape design solutions.",
+    href: "/pages/services",
+  },
+  {
+    name: "Green Building Design",
+    description: "Eco-conscious architecture with sustainable design principles.",
+    href: "/pages/services",
+  },
 ];
+
 
 const callsToAction = [
   {
@@ -115,20 +125,20 @@ export default function Header() {
                     <ChevronDownIcon className="h-5 w-5" />
                   </PopoverButton>
 
-                  <PopoverPanel className="absolute top-12 z-10 mt-3 md:w-[80vh] overflow-hidden rounded-xl bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 px-4 py-4">
+                  <PopoverPanel className="absolute top-12 z-10 mt-3 md:w-[60vh] overflow-hidden rounded-xl bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 px-3 py-3">
                       {premiumservices.map((item) => (
                         <div
                           key={item.name}
-                          className="flex flex-col items-center justify-center rounded-xl py-6 px-4 bg-white text-black hover:text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-emerald-800"
+                          className="flex flex-col items-center justify-center rounded-xl py-2 px-2 bg-white text-black hover:text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-secondary"
                         >
                           {item.href ? (
                             <Link
                               href={item.href}
-                              className="text-xl font-semibold text-center transition-colors duration-200"
+                              className="text-md font-semibold text-center transition-colors duration-200"
                             >
                               {item.name}
-                              <p className="mt-2 text-center text-sm">
+                              <p className="mt-2 text-center text-xs">
                                 {item.description}
                               </p>
                             </Link>

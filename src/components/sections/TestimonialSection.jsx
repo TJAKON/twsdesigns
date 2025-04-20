@@ -82,7 +82,7 @@ const fadeInUp = {
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-gray-50 py-16 sm:py-20 overflow-hidden">
+    <section className="bg-foreground py-16 sm:py-20 overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div

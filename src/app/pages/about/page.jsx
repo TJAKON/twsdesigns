@@ -20,20 +20,20 @@ export default function Page() {
       </motion.section>
 
       {/* Interior Design Overview */}
-      <section className="py-20 bg-[#0A0A0A] text-[#F8F8F8]">
+      <section className="py-20 bg-foreground text-secondary">
         <div className="max-w-screen-xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
           <div>
             <h5 className="text-[#D4AF37] font-semibold">WELCOME TO TAW Designs</h5>
             <h2 className="text-3xl font-bold mt-2">INTERIOR DESIGN THAT INSPIRES</h2>
-            <p className="text-[#C0C0C0] mt-4">At TAW Designs, we craft interiors that merge functionality with elegance. Our designs transform spaces, creating environments that resonate with your style and needs.</p>
+            <p className="mt-4 text-secondary">At TAW Designs, we craft interiors that merge functionality with elegance. Our designs transform spaces, creating environments that resonate with your style and needs.</p>
             <div className="mt-6 space-y-4">
               <div>
                 <h4 className="text-[#D4AF37] font-semibold uppercase">Innovative Designs</h4>
-                <p className="text-[#C0C0C0]">We embrace modern design trends and infuse innovative ideas into every project, ensuring your space stands out.</p>
+                <p className="text-secondary">We embrace modern design trends and infuse innovative ideas into every project, ensuring your space stands out.</p>
               </div>
               <div>
                 <h4 className="text-[#D4AF37] font-semibold uppercase">Custom Solutions</h4>
-                <p className="text-[#C0C0C0]">We provide tailored solutions that reflect your unique preferences, blending comfort and style seamlessly.</p>
+                <p className="text-secondary">We provide tailored solutions that reflect your unique preferences, blending comfort and style seamlessly.</p>
               </div>
             </div>
           </div>
@@ -113,20 +113,20 @@ export default function Page() {
       </section>
 
       {/* We Strive For Excellence */}
-      <section className="py-20 bg-[#0A0A0A] text-[#F8F8F8]">
+      <section className="py-20 bg-foreground text-secondary">
         <div className="max-w-screen-xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">WE STRIVE FOR EXCELLENCE</h2>
-          <p className="text-sm max-w-xl text-[#C0C0C0]">At TAW Designs, we are dedicated to delivering exceptional designs that exceed client expectations. Every project is a testament to our commitment to quality and innovation.</p>
+          <p className="text-sm max-w-xl">At TAW Designs, we are dedicated to delivering exceptional designs that exceed client expectations. Every project is a testament to our commitment to quality and innovation.</p>
           <button className="mt-6 bg-[#D4AF37] text-[#0A0A0A] px-6 py-2 rounded-md uppercase hover:bg-[#0A0A0A] hover:text-[#F8F8F8] transition-all">Discover Our Work</button>
         </div>
       </section>
 
       {/* From Concept to Functional Beauty */}
-      <section className="py-20 bg-[#1F1F1F] text-center text-[#F8F8F8]">
-        <h5 className="text-[#D4AF37] font-semibold">TRANSFORM YOUR SPACE WITH STYLE</h5>
+      <section className="py-20 bg-accent text-center text-secondary">
+        <h5 className="text-secondary font-extrabold">TRANSFORM YOUR SPACE WITH STYLE</h5>
         <h2 className="text-3xl font-bold mt-2">FROM CONCEPT TO FUNCTIONAL BEAUTY</h2>
-        <p className="text-sm max-w-xl mx-auto mt-4 text-[#C0C0C0]">Let us help you create a space that’s functional, beautiful, and uniquely yours. Contact us today to get started on your design journey.</p>
-        <button className="mt-6 bg-[#D4AF37] text-[#0A0A0A] px-6 py-2 rounded-md uppercase hover:bg-[#F8F8F8] hover:text-[#0A0A0A] transition-all">Get In Touch</button>
+        <p className="text-sm max-w-xl mx-auto mt-4 text-secondary">Let us help you create a space that’s functional, beautiful, and uniquely yours. Contact us today to get started on your design journey.</p>
+        <button className="mt-6 bg-black text-accent px-6 py-2 rounded-md uppercase hover:bg-[#F8F8F8] hover:text-[#0A0A0A] transition-all">Get In Touch</button>
       </section>
     </>
   );

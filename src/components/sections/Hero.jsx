@@ -7,7 +7,13 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import Link from "next/link";
 
-const images = ["/banners/banner4.jpg", "/banners/banner3.jpg", "/projects/p15.jpg","/projects/p17.jpg", "/projects/p19.jpg"];
+const images = [
+  "/banners/banner4.jpg",
+  "/banners/banner3.jpg",
+  "/projects/p15.jpg",
+  "/projects/p17.jpg",
+  "/projects/p19.jpg",
+];
 
 const Hero = () => {
   return (
@@ -38,15 +44,15 @@ const Hero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />
 
-      {/* Content */}
-      <div className="absolute z-20 top-20 inset-0 flex flex-col items-center justify-center text-center px-4 gap-6">
-        <h2 className="text-3xl md:text-5xl font-bold text-amber-300 tracking-tight uppercase">
-        Smarter Layouts 
+      {/* Main Content - Bottom Left */}
+      <div className="absolute z-20 bottom-28 left-6 md:left-10 text-left px-4 max-w-xl space-y-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-amber-300 uppercase">
+          Smarter Layouts
         </h2>
-        <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight uppercase">
-        Larger Possibilities
+        <h2 className="text-3xl md:text-5xl font-bold text-white uppercase">
+          Larger Possibilities
         </h2>
-        <div className="flex flex-wrap justify-center gap-4 mt-4">
+        <div className="flex flex-wrap gap-4 mt-4">
           <Link href="/pages/projects">
             <button className="px-6 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold rounded-none">
               OUR PROJECT
@@ -57,6 +63,22 @@ const Hero = () => {
               OUR PRICING
             </button>
           </Link>
+        </div>
+      </div>
+
+      {/* Additional Info Section */}
+      <div className="absolute z-20 bottom-0 left-0 w-full px-6 md:px-10 py-4 md:py-6 flex flex-col md:flex-row gap-6 bg-black/30 backdrop-blur-md">
+        <div className="text-white">
+          <h3 className="text-lg md:text-xl font-semibold">10+ Years Experience</h3>
+          <p className="text-sm">We build innovative, sustainable structures.</p>
+        </div>
+        <div className="text-white">
+          <h3 className="text-lg md:text-xl font-semibold">500+ Projects</h3>
+          <p className="text-sm">Successfully completed across India.</p>
+        </div>
+        <div className="text-white">
+          <h3 className="text-lg md:text-xl font-semibold">Top Quality Materials</h3>
+          <p className="text-sm">We use premium and certified products.</p>
         </div>
       </div>
     </section>

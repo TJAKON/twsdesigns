@@ -161,7 +161,7 @@ function page() {
 
       {/* Services Feature Cards */}
       <motion.section
-        className="py-20 bg-[#1F1F1F] text-[#F8F8F8]"
+        className="py-20 bg-foreground text-black"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -221,25 +221,25 @@ function page() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h5 className="text-[#D4AF37] font-semibold uppercase">
+            <h5 className="text-accent font-semibold uppercase">
               Our Services
             </h5>
             <h2 className="text-3xl font-bold mt-2 leading-snug">
               Timeless Design Meets Modern Elegance
             </h2>
-            <p className="text-[#C0C0C0] mt-4 leading-relaxed">
+            <p className="text-black mt-4 leading-relaxed">
               We are dedicated to creating visually captivating and functionally
               efficient interiors. From concept development to execution, our
               team ensures each project reflects your personality while
               enhancing comfort, space, and sophistication.
             </p>
-            <p className="text-[#C0C0C0] mt-4 leading-relaxed">
+            <p className="text-black mt-4 leading-relaxed">
               Whether it's transforming residential spaces or optimizing
               commercial interiors, our approach is rooted in design excellence,
               precision craftsmanship, and a deep understanding of client needs.
             </p>
             <motion.button
-              className="mt-6 bg-[#D4AF37] text-[#0A0A0A] px-6 py-3 uppercase font-semibold rounded-md shadow-md hover:bg-[#F8F8F8] hover:text-[#0A0A0A] transition-all duration-300 w-max"
+              className="mt-6 bg-black text-white px-6 py-3 uppercase font-semibold rounded-md shadow-md hover:bg-accent hover:text-[#0A0A0A] transition-all duration-300 w-max"
               whileTap={{ scale: 0.95 }}
             >
               Contact Us

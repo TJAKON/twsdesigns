@@ -15,7 +15,22 @@ import { Footer } from "@/components/layout/Footer";
 // });
 
 export const metadata = {
-  title: "The ARCHITECHT WORKSHOP",
+  title: "TAW Designs",
+  icons: {
+    icon: "/logo1.png",
+    shortcut: "/logo1.png",
+  },
+  keywords: [
+    "TAW Designs",
+    "Architecture",
+    "Interior Design",
+    "Pune",
+    "India",
+    "Residential Design",
+    "Commercial Design",
+    "Eco-friendly Architecture",
+    "Smart Design Solutions",
+  ],
   description:
     "Smarter Layouts, Larger Possibilities",
 };
