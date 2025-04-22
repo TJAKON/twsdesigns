@@ -5,28 +5,28 @@ import Link from 'next/link';
 
 const projects = [
   {
-    title: "HOUSE INTERIOR",
+    title: "PROJECT & COST ANALYSIS",
     subtitle: "We take care of your",
     image: "/banners/i1.jpeg",
     href: "/project1",
     color: "text-white",
   },
   {
-    title: "LIVING SPACE",
+    title: "ARCHITECTURAL DESIGN",
     subtitle: "Modern & Elegant",
     image: "/banners/i4.jpeg",
     href: "/project2",
     color: "text-white",
   },
   {
-    title: "KITCHEN DESIGN",
+    title: "CONSULTANCY & COORDINATION",
     subtitle: "Innovative Concepts",
     image: "/banners/i3.jpeg",
     href: "/project3",
     color: "text-white",
   },
   {
-    title: "FURNITURE SETUP",
+    title: "PROJECT MANAGEMENT & EXECUTION",
     subtitle: "Comfort Meets Style",
     image: "/banners/i2.jpeg",
     href: "/project4",

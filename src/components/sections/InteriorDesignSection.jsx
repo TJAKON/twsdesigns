@@ -17,29 +17,27 @@ export default function InteriorDesignSection() {
             className="space-y-5"
           >
             <h5 className="text-[#D4AF37] font-semibold text-sm md:text-base uppercase tracking-wide">
-              Discover TAW Designs
+            Explore Our Vision
             </h5>
             <h2 className="text-3xl md:text-4xl font-bold text-[#F8F8F8] leading-snug">
-              Exceptional Interior Design Solutions
+            Transforming Your Living and Working Spaces
             </h2>
             <p className="text-[#C0C0C0] text-sm md:text-base">
-              At TAW Designs Pvt. Ltd., we blend creativity with functionality to craft interior spaces
-              that inspire. From residential to commercial projects, our expert team ensures every detail
-              reflects your vision, lifestyle, and purpose.
+            At Reet Technologies, we craft exceptional interior design solutions that harmonize style and function.
+            Our team focuses on delivering personalized, sustainable designs for every project, from homes to offices.
             </p>
 
             <div>
               <h5 className="text-[#D4AF37] font-semibold text-base mb-1">Innovative Concepts</h5>
               <p className="text-[#C0C0C0] text-sm md:text-base">
-                We redefine spaces with modern, trendsetting designs rooted in innovation and smart space utilization.
+              Our designs bring innovation and creativity to every corner of your space, ensuring a blend of modern aesthetics and practicality.
               </p>
             </div>
 
             <div>
               <h5 className="text-[#D4AF37] font-semibold text-base mb-1">Tailored Aesthetics</h5>
               <p className="text-[#C0C0C0] text-sm md:text-base">
-                Every project we handle is unique. Our team collaborates closely with clients to ensure the interiors
-                align with their personal tastes and professional needs.
+              We believe in tailoring each project to meet your specific needs. From the layout to the final touches, your space will reflect your identity.
               </p>
             </div>
           </motion.div>

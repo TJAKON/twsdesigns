@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 function page() {
@@ -44,20 +45,24 @@ function page() {
               Transform Your Everyday
             </h5>
             <h2 className="text-3xl lg:text-4xl font-bold mt-2 text-black leading-snug">
-              Let’s Talk Interior Design <br className="hidden lg:block" />
-              That Feels Like Home
+              let's Talk Architectural Design <br className="hidden lg:block" />
+              Tailored to Your Lifestyle
             </h2>
             <p className="text-gray-600 mt-4 text-base lg:text-lg leading-relaxed">
-              From luxurious residential layouts to vibrant commercial spaces,
-              we craft interiors that breathe life into your vision. Our
-              tailored approach blends aesthetics with practicality—creating
-              timeless, functional, and soulfully curated environments.
+              At TAW Designs, we specialize in crafting cohesive and inspiring
+              spaces across Residential, Commercial, and Hospitality sectors.
+              Whether it’s a dream home, a smart workspace, or a welcoming
+              café—our design language adapts to your story. We handle it all:
+              3D visualizations, modular solutions, site supervision, and
+              end-to-end turnkey execution. Our commitment to quality and
+              innovation ensures that every project is a masterpiece, reflecting
+              your unique vision and lifestyle.
             </p>
             <motion.button
               className="mt-6 bg-black text-white px-8 py-3 uppercase text-sm font-semibold rounded-md shadow-lg hover:bg-yellow-500 hover:text-black transition-all duration-300"
               whileTap={{ scale: 0.95 }}
             >
-              View Our Projects
+              Explore Our Services
             </motion.button>
           </motion.div>
 
@@ -68,17 +73,19 @@ function page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <img
+            <Image
               src="/help5.jpeg"
               alt="Interior Design"
-              className="w-full rounded-2xl shadow-xl object-cover"
+              width={600}
+              height={0}
+              className="w-full h-[500px] rounded-2xl shadow-xl object-cover"
             />
           </motion.div>
         </div>
       </motion.section>
 
-           {/* Services Feature Cards */}
-           <motion.section
+      {/* Services Feature Cards */}
+      <motion.section
         className="py-20 bg-[#0A0A0A] text-[#F8F8F8]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -90,9 +97,10 @@ function page() {
             Our Services
           </h2>
           <p className="text-center text-[#C0C0C0] max-w-2xl mx-auto mb-12 text-base lg:text-lg">
-            With a multidisciplinary team of experts, we provide a full spectrum
-            of architectural, interior, and sustainable design services tailored
-            to meet the unique vision of each client.
+            We offer bespoke interior and architectural services across
+            Residential, Commercial, and Hospitality sectors. From vision to
+            execution, TAW Designs is your partner in creating timeless,
+            functional, and emotionally resonant spaces.
           </p>
 
           <div className="space-y-14">
@@ -100,36 +108,53 @@ function page() {
               {
                 title: "Architectural Plans",
                 subtitle:
-                  "Designing with precision and intent to build spaces that are structurally sound and aesthetically striking.",
+                  "We provide detailed architectural plans for various project types, ensuring functional and aesthetic excellence.",
                 bullets: ["Residential", "Commercial"],
               },
               {
                 title: "Planning & Designing",
                 subtitle:
-                  "Strategic space planning and intuitive layouts that merge creativity with functionality.",
+                  "From site planning to working drawings, our experts provide comprehensive planning services to ensure smooth execution.",
                 bullets: [
-                  "Site Planning – Transforming land into purposeful environments.",
-                  "Project Planning – Smart, efficient, and scalable layout strategies.",
-                  "Submission & Sanctioning Drawings – Seamless approval documentation.",
-                  "Working Drawings – Comprehensive blueprints for flawless execution.",
+                  "Site Planning",
+                  "Project Planning",
+                  "Submission & Sanction Drawings",
+                  "Working Drawings",
                 ],
               },
               {
                 title: "Project Management",
                 subtitle:
-                  "From concept to completion, we ensure every phase is executed with professionalism and efficiency.",
+                  "With expert coordination and technical assistance, we manage all aspects of your project, ensuring timely and efficient execution.",
                 bullets: [
-                  "3D Animation – Realistic internal and external walkthroughs.",
-                  "Landscape & Interior Design – Balanced harmony of nature and space.",
-                  "Commercial & Mixed-use Design – Functional and futuristic urban spaces.",
+                  "Project Execution",
+                  "Coordination with Consultants",
+                  "Acquiring Planning & Working Drawings",
+                  "Full Project Handover Support",
+                ],
+              },
+              {
+                title: "3D Animation & Visualization",
+                subtitle:
+                  "Bring your designs to life with realistic 3D animations and visualizations for both interior and exterior spaces.",
+                bullets: [
+                  "3D Exterior & Interior Animation",
+                  "Virtual Reality Integration",
+                  "Architectural Animation",
                 ],
               },
               {
                 title: "Green Building Design",
                 subtitle:
-                  "We create energy-efficient, eco-conscious structures that prioritize sustainability without compromising on style.",
+                  "We design eco-friendly, sustainable buildings that enhance your space's environmental impact while offering long-term savings.",
                 bullets: [
-                  "Eco-friendly architecture reducing carbon footprint and improving efficiency.",
+                  "Energy Efficiency",
+                  "Water Conservation",
+                  "Sustainable Materials",
+                  "Indoor Environmental Quality (IEQ)",
+                  "Waste Reduction & Recycling",
+                  "Site Sustainability",
+                  "Smart Building Design",
                 ],
               },
             ].map((service, index) => (
@@ -157,7 +182,6 @@ function page() {
           </div>
         </div>
       </motion.section>
-
 
       {/* Services Feature Cards */}
       <motion.section
@@ -197,7 +221,7 @@ function page() {
                   i === 0
                     ? "bg-[#0A0A0A] text-[#F8F8F8]"
                     : "border border-[#C0C0C0] bg-[#1F1F1F] text-[#F8F8F8]"
-                } rounded-lg shadow-md`}
+                } rounded-lg shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl`}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -264,31 +288,31 @@ function page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h5 className="text-[#D4AF37] font-semibold">HOW DO WE WORK ?</h5>
+            <h5 className="text-[#D4AF37] font-semibold">HOW WE WORK</h5>
             <h2 className="text-3xl font-bold mt-2">
-              WE DESIGN FOR YOUR SATISFACTION
+              FROM IDEAS TO INSPIRING DESIGNS
             </h2>
             <p className="text-[#C0C0C0] mt-4">
-              Our streamlined process ensures transparency, creativity, and
-              precision at every stage. We collaborate closely with clients to
-              deliver tailored solutions that exceed expectations.
+              We follow a structured process that integrates creativity with
+              functionality, ensuring we meet client expectations at every
+              stage.
             </p>
 
             {[
               {
-                title: "CONCEPT",
+                title: "INITIAL CONSULTATION",
                 description:
-                  "We start by understanding your vision, gathering requirements, and brainstorming ideas that align with your goals.",
+                  "We begin with a deep dive into understanding your goals, lifestyle, and preferences, ensuring that our design aligns with your vision.",
               },
               {
-                title: "DESIGN",
+                title: "DESIGN PHASE",
                 description:
-                  "Our creative team transforms concepts into compelling visuals with wireframes, mockups, and prototypes.",
+                  "Our designers bring your vision to life with detailed plans, mood boards, and design concepts, ensuring clarity and alignment.",
               },
               {
-                title: "DEVELOPMENT",
+                title: "EXECUTION AND FINAL TOUCHES",
                 description:
-                  "We bring designs to life using modern technologies, ensuring a seamless, responsive, and optimized user experience.",
+                  "Once designs are approved, we bring them to life with meticulous craftsmanship, using only the finest materials and finishing touches.",
               },
             ].map((step, i) => (
               <motion.div
@@ -317,24 +341,24 @@ function page() {
           >
             {[
               {
-                title: "RESIDENTIAL",
+                title: "RESIDENTIAL DESIGN",
                 description:
-                  "Elegant and functional designs that turn houses into dream homes with a blend of comfort and style.",
+                  "Creating spaces that reflect your personal style, enhancing comfort and functionality for modern living.",
               },
               {
-                title: "RESTAURANT",
+                title: "COMMERCIAL SPACES",
                 description:
-                  "We create inviting ambiances and practical layouts that enhance customer experience and brand identity.",
+                  "Designs that align with your business goals, enhancing brand identity, productivity, and customer experience.",
               },
               {
-                title: "CORPORATE",
+                title: "RESTAURANT INTERIORS",
                 description:
-                  "Smart and professional office spaces designed to boost productivity, collaboration, and company culture.",
+                  "Transforming dining spaces into inviting and memorable environments with attention to ambiance and flow.",
               },
               {
-                title: "COMMERCIAL",
+                title: "OFFICE INTERIORS",
                 description:
-                  "Tailored commercial environments built for efficiency, appeal, and brand alignment across industries.",
+                  "Smart office layouts that foster collaboration and productivity, supporting a company’s vision and culture.",
               },
             ].map((service, i) => (
               <div key={i}>
@@ -358,30 +382,31 @@ function page() {
       </motion.section>
 
       <motion.section
-        className="bg-accent text-black py-16 text-center relative overflow-hidden"
+        className="bg-[#D4AF37] text-black py-16 text-center relative overflow-hidden"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         <div className="max-w-3xl mx-auto px-4">
-          <h4 className="text-sm uppercase tracking-widest font-semibold">
-            Let's Build Something Beautiful
+          <h4 className="text-sm uppercase tracking-widest font-semibold text-[#1F1F1F]">
+            Let's Bring Your Vision to Life
           </h4>
           <h3 className="text-3xl md:text-4xl font-extrabold mt-2 leading-snug">
-            Ready to Revamp <br className="hidden md:block" />
-            Your Living or Work Space?
+            Ready to Redefine Your Space? <br className="hidden md:block" />
+            With Elegant and Functional Design?
           </h3>
           <p className="mt-4 text-base md:text-lg text-black/80">
-            Discover tailored interior solutions that combine form, function,
-            and personality.
+            Experience custom interior solutions that blend creativity,
+            functionality, and your personal style for a truly transformative
+            environment.
           </p>
           <motion.button
             className="mt-6 inline-block px-10 py-3 bg-black text-white rounded-full shadow-lg text-sm uppercase font-semibold hover:bg-white hover:text-black transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact Us Today
+            Get in Touch with Us
           </motion.button>
         </div>
 
