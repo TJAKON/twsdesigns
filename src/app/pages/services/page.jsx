@@ -182,7 +182,6 @@ function page() {
           </div>
         </div>
       </motion.section>
-
       {/* Services Feature Cards */}
       <motion.section
         className="py-20 bg-foreground text-black"
@@ -195,24 +194,24 @@ function page() {
           <div className="grid grid-cols-2 gap-6">
             {[
               {
-                title: "INTERIOR DESIGN",
+                title: "ARCHITECTURAL DESIGN",
                 description:
-                  "We craft innovative, functional, and aesthetic interior concepts tailored to your lifestyle and vision.",
+                  "We specialize in creating innovative and functional architectural designs that perfectly align with your vision and the environment.",
               },
               {
-                title: "OFFICE REDESIGN",
+                title: "RESIDENTIAL INTERIOR DESIGN",
                 description:
-                  "Reimagine your workspace with ergonomic and productivity-boosting designs that foster creativity and collaboration.",
+                  "Transform your home into a space of comfort and style with customized interior design solutions that reflect your personality.",
               },
               {
-                title: "INTERIOR DECORATION",
+                title: "COMMERCIAL SPACES",
                 description:
-                  "Enhance the ambiance with expert styling, color harmony, and décor that breathes life into every corner.",
+                  "Designing efficient, modern, and inspiring commercial spaces that foster productivity and offer a welcoming atmosphere for clients and employees.",
               },
               {
-                title: "FURNITURE PRODUCTION",
+                title: "CUSTOM FURNITURE DESIGN",
                 description:
-                  "Custom-crafted furniture that combines quality materials and timeless design to complement your space.",
+                  "Our bespoke furniture designs are crafted to complement your architectural space with style, functionality, and quality craftsmanship.",
               },
             ].map((service, i) => (
               <motion.div
@@ -249,18 +248,18 @@ function page() {
               Our Services
             </h5>
             <h2 className="text-3xl font-bold mt-2 leading-snug">
-              Timeless Design Meets Modern Elegance
+              Crafting Spaces That Inspire
             </h2>
             <p className="text-black mt-4 leading-relaxed">
-              We are dedicated to creating visually captivating and functionally
-              efficient interiors. From concept development to execution, our
-              team ensures each project reflects your personality while
-              enhancing comfort, space, and sophistication.
+              At TAW Designs, we focus on creating environments that blend
+              aesthetics with functionality. Whether it's residential or
+              commercial spaces, we offer comprehensive architectural services
+              tailored to your specific needs.
             </p>
             <p className="text-black mt-4 leading-relaxed">
-              Whether it's transforming residential spaces or optimizing
-              commercial interiors, our approach is rooted in design excellence,
-              precision craftsmanship, and a deep understanding of client needs.
+              From the initial concept to final execution, our goal is to
+              deliver spaces that not only meet but exceed client expectations,
+              while ensuring sustainability and comfort in every project.
             </p>
             <motion.button
               className="mt-6 bg-black text-white px-6 py-3 uppercase font-semibold rounded-md shadow-md hover:bg-accent hover:text-[#0A0A0A] transition-all duration-300 w-max"

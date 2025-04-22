@@ -54,7 +54,7 @@ export default function SplitScreen() {
           />
           <div className="absolute inset-0 flex items-center justify-center text-center bg-black/60 md:bg-white/5 md:group-hover/inner:bg-black/70 transition-all duration-500 delay-200">
             <h1 className="text-amber-300 text-4xl md:text-8xl font-serif tracking-wider leading-tight opacity-100 md:opacity-0 md:group-hover/inner:opacity-80 transition-opacity duration-700 delay-300">
-              INTERIOR DESIGN
+              PROJECT MANAGEMENT
             </h1>
           </div>
         </div>
