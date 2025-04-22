@@ -3,11 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter } from "lucide-react";
-import {
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-} from "@heroicons/react/20/solid";
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -15,7 +12,18 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
         {/* Left Section - Brand & About */}
         <div>
-          <h2 className="text-3xl font-bold mt-4 text-[#D4AF37]">TAW DESIGNS</h2>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo1.png"
+              alt="TAW Designs Logo"
+              width={100}
+              height={100}
+              className="w-auto h-32 md:h-24"
+            />
+            <span className="text-md md:text-2xl bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent leading-tight">
+              TAW <br /> DESIGNS
+            </span>
+          </Link>
           <p className="text-sm mt-3 text-[#C0C0C0]">
             TAW Designs Pvt. Ltd. – Leading Pune-based architectural firm
             delivering smart, eco-friendly, and cost-effective residential and
@@ -29,11 +37,10 @@ export const Footer = () => {
           <ul className="mt-3 space-y-2">
             {[
               { label: "Home", href: "/" },
-              { label: "About Us", href: "/about" },
-              { label: "Services", href: "/services" },
-              { label: "Projects", href: "/projects" },
-              { label: "Our Team", href: "/team" },
-              { label: "Contact Us", href: "/contact" },
+              { label: "About Us", href: "/pages/about" },
+              { label: "Services", href: "/pages/services" },
+              { label: "Projects", href: "/pages/projects" },
+              { label: "Contact Us", href: "/pages/contact" },
             ].map((link) => (
               <li key={link.href}>
                 <a href={link.href} className="hover:text-[#D4AF37]">
@@ -50,7 +57,10 @@ export const Footer = () => {
           <div className="mt-3 space-y-2 text-sm text-[#C0C0C0]">
             <p className="flex items-center">
               <EnvelopeIcon className="h-5 w-5 mr-2 text-[#D4AF37]" />
-              <a href="mailto:info@tawdesigns.com" className="hover:text-[#F8F8F8]">
+              <a
+                href="mailto:info@tawdesigns.com"
+                className="hover:text-[#F8F8F8]"
+              >
                 info@tawdesigns.com
               </a>
             </p>
@@ -64,16 +74,15 @@ export const Footer = () => {
             </p>
           </div>
 
-          <h3 className="text-lg font-semibold mt-5 text-[#D4AF37]">Follow Us</h3>
+          <h3 className="text-lg font-semibold mt-5 text-[#D4AF37]">
+            Follow Us
+          </h3>
           <div className="flex space-x-4 mt-2">
             <a href="#" className="text-[#C0C0C0] hover:text-[#D4AF37]">
               <Facebook size={24} />
             </a>
             <a href="#" className="text-[#C0C0C0] hover:text-[#D4AF37]">
               <Instagram size={24} />
-            </a>
-            <a href="#" className="text-[#C0C0C0] hover:text-[#D4AF37]">
-              <Twitter size={24} />
             </a>
           </div>
         </div>

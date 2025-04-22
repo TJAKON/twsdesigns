@@ -15,7 +15,7 @@ function page() {
       >
         <div className="max-w-screen-xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold">SERVICES</h1>
-          <p className="text-sm mt-2">HOME / SERVICES</p>
+          <p className="text-sm mt-2">HOME / SERVICES / ARCHITECTUAL SERVICES</p>
           <motion.div
             className="bg-gray-700 mt-8 h-72 w-full rounded-lg"
             initial={{ scale: 0.95 }}

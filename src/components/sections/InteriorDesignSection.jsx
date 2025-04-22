@@ -22,35 +22,34 @@ export default function InteriorDesignSection() {
               Redefining Architecture with Precision and Creativity
             </h2>
             <p className="text-[#C0C0C0] text-sm md:text-base">
-              At TAW Designs, we specialize in creating cutting-edge
-              architectural solutions that merge functionality with artistic
-              expression. Whether it’s a residential, commercial, or hospitality
-              project, we ensure every design reflects innovation and
-              sustainability.
+              One of premier architectural organizations in Pune, TAW Designs
+              Pvt Ltd., offers creative and environmentally friendly design
+              solutions for interior, landscape, and commercial and residential
+              architecture. With an Expertise in Project Management and
+              Execution of planning, TAW Designs not only helps clients in
+              Project Execution but also helps in Cost Friendly budgets with
+              Extra Space in Design and Planning with Extra Ordinary “Design
+              Thinking” for your Dream Projects.
             </p>
 
             {/* Section for Innovative Concepts */}
             <div>
               <h5 className="text-[#D4AF37] font-semibold text-base mb-1">
-                Innovative Design Concepts
+              Our Design Efficiency 
               </h5>
               <p className="text-[#C0C0C0] text-sm md:text-base">
-                Our designs are rooted in creativity and forward-thinking ideas.
-                We blend modern technology with timeless style to craft spaces
-                that are not only beautiful but also efficient and sustainable.
+              We ensures optimal use of resources, time, and budget, minimizing waste and streamlining workflows for faster project delivery. 
               </p>
             </div>
 
             {/* Section for Tailored Aesthetics */}
             <div>
               <h5 className="text-[#D4AF37] font-semibold text-base mb-1">
-                Personalized Aesthetic Solutions
+              Our Design Efficacy
               </h5>
               <p className="text-[#C0C0C0] text-sm md:text-base">
-                At TAW Designs, we understand that each project is unique. From
-                concept to completion, we work closely with clients to ensure
-                the design matches their vision while incorporating functional
-                and aesthetic value.
+              We are focusing on functional, aesthetic, and sustainable outcomes, we create cost-effective, high-performing architectural solutions for residential, commercial, and mixed-use projects in Pune, Mumbai, and Maharashtra. Our designs enhance usability, energy efficiency, and long-term value, ensuring eco-friendly construction and sustainable architecture that align with the client’s vision and goals.
+
               </p>
             </div>
           </motion.div>

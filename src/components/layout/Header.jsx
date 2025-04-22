@@ -39,17 +39,17 @@ const premiumservices = [
   {
     name: "Planning & Designing",
     description: "Comprehensive site planning, project layout, and sanctioned drawings.",
-    href: "/pages/services",
+    href: "/pages/planninganddesigningservice",
   },
   {
     name: "Project Management",
     description: "From 3D visualizations to commercial and landscape design solutions.",
-    href: "/pages/services",
+    href: "/pages/projectmanagementservice",
   },
   {
     name: "Green Building Design",
     description: "Eco-conscious architecture with sustainable design principles.",
-    href: "/pages/services",
+    href: "/pages/tawgreenservice",
   },
 ];
 
@@ -274,6 +274,33 @@ export default function Header() {
                   onClick={toggleMobileMenu}
                 >
                   Services
+                </Link>
+              </li>
+              <li className={pathname === "/pages/tawgreenservices" ? "active" : ""}>
+                <Link
+                  href="/pages/tawgreenservice"
+                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
+                  onClick={toggleMobileMenu}
+                >
+                  TAW Greens
+                </Link>
+              </li>
+              <li className={pathname === "/pages/projectmanagementservice" ? "active" : ""}>
+                <Link
+                  href="/pages/projectmanagementservice"
+                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
+                  onClick={toggleMobileMenu}
+                >
+                TAW Project & Management
+                </Link>
+              </li>
+              <li className={pathname === "/pages/planninganddesigningservice" ? "active" : ""}>
+                <Link
+                  href="/pages/planninganddesigningservice"
+                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
+                  onClick={toggleMobileMenu}
+                >
+                TAW Planning & Designing
                 </Link>
               </li>
             </ul>

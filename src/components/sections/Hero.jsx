@@ -45,12 +45,12 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Main Content - Bottom Left */}
-      <div className="absolute z-20 bottom-80 left-8 text-center md:bottom-28 md:left-10 md:text-left px-4 max-w-xl space-y-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-amber-300 uppercase">
+      <div className="absolute z-20 bottom-80 left-8 text-center md:bottom-28 md:left-10 md:text-left px-4 max-w-3xl space-y-4">
+        <h2 className="text-3xl md:text-7xl font-bold text-clip text-amber-300 uppercase">
           Smarter Layouts
         </h2>
         <h2 className="text-3xl md:text-5xl font-bold text-white uppercase">
-          Larger Possibilities
+          Larger <br/> Possibilities
         </h2>
         <div className="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">
           <Link href="/pages/projects">
