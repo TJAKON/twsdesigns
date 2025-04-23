@@ -18,9 +18,9 @@ export const Footer = () => {
               alt="TAW Designs Logo"
               width={100}
               height={100}
-              className="w-auto h-32 md:h-24"
+              className="w-auto h-24 md:h-24"
             />
-            <span className="text-md md:text-2xl bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent leading-tight">
+            <span className="text-lg md:text-2xl bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent leading-tight">
               TAW <br /> DESIGNS
             </span>
           </Link>

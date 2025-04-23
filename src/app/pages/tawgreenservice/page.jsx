@@ -10,7 +10,7 @@ const Section = ({ title, children, image, reverse }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
     viewport={{ once: true }}
-    className={`my-20 flex flex-col-reverse md:flex-row ${
+    className={` my-10 md:my-20 flex flex-col-reverse md:flex-row ${
       reverse ? "md:flex-row-reverse" : ""
     } gap-12 items-center`}
   >
@@ -25,7 +25,7 @@ const Section = ({ title, children, image, reverse }) => (
           alt={title}
           width={600}
           height={400}
-          className=" h-[600px] object-cover shadow-xl border border-gray-200"
+          className=" h-[300px] md:h-[600px] object-cover shadow-xl border border-gray-200"
         />
       </div>
     )}
@@ -53,14 +53,14 @@ export default function Page() {
         </div>
       </motion.section>
 
-      <div className="bg-white text-gray-900 px-6 md:px-20 py-12">
+      <div className="bg-white text-gray-900 px-5 md:px-20 py-12">
         <div className="max-w-7xl mx-auto">
           {/* Page Heading */}
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-extrabold mb-12 text-green-700 text-center"
+            className=" text-4xl md:text-5xl font-extrabold mb-0 md:mb-12 text-green-700 text-center"
           >
             Green Building Design
           </motion.h1>
@@ -93,13 +93,11 @@ export default function Page() {
 
           <Section title="Benefits of Green Buildings" image="/help1.jpeg">
             <ul className="list-disc list-inside space-y-2 text-gray-700 text-lg">
-              <li>✅ Lower operating costs (energy & water savings)</li>
-              <li>✅ Healthier living/working spaces (better air quality)</li>
-              <li>
-                ✅ Reduced carbon footprint (lower greenhouse gas emissions)
-              </li>
-              <li>✅ Higher property value & market demand</li>
-              <li>✅ Compliance with environmental regulations</li>
+              <li>Lower operating costs (energy & water savings)</li>
+              <li>Healthier living/working spaces (better air quality)</li>
+              <li>Reduced carbon footprint (lower greenhouse gas emissions)</li>
+              <li>Higher property value & market demand</li>
+              <li>Compliance with environmental regulations</li>
             </ul>
           </Section>
 
@@ -109,7 +107,7 @@ export default function Page() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-green-700 my-16 text-center"
+            className=" text-3xl md:text-4xl font-bold text-green-700 my-16 text-center"
           >
             Key Principles of Green Building
           </motion.h2>
@@ -166,7 +164,7 @@ export default function Page() {
                   alt={title}
                   width={500}
                   height={300}
-                  className=" mb-4"
+                  className=" h-[300px] md:h-[450px] object-cover mb-4"
                 />
                 <h3 className="text-xl font-bold text-green-600 mb-2">
                   {title}

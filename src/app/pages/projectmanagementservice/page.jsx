@@ -26,7 +26,7 @@ const Section = ({ title, children, image, reverse }) => (
           alt={title}
           width={600}
           height={200}
-          className=" h-[600px] object-cover shadow-xl border border-[#C0C0C0]"
+          className=" h-[300px] md:h-[600px] object-cover shadow-xl border border-[#C0C0C0]"
         />
       </div>
     )}
@@ -89,15 +89,15 @@ export default function Page() {
 
           <Section title="Services We Offer" image="/help1.jpeg" reverse>
             <ul className="list-disc list-inside space-y-2 text-[#F8F8F8] text-lg">
-              <li>📌 Project Execution</li>
+              <li>Project Execution</li>
               <li>
-                📌 Coordination with Structural, HVAC, MEP & Green Consultants
+                Coordination with Structural, HVAC, MEP & Green Consultants
               </li>
-              <li>📌 Acquiring Planning & Working Drawings</li>
-              <li>📌 Complete Support for Final Handover</li>
-              <li>📌 3D Animation – Internal & External</li>
-              <li>📌 Landscape & Interior Design</li>
-              <li>📌 Commercial & Mixed-Use Architecture</li>
+              <li>Acquiring Planning & Working Drawings</li>
+              <li>Complete Support for Final Handover</li>
+              <li>3D Animation – Internal & External</li>
+              <li>Landscape & Interior Design</li>
+              <li>Commercial & Mixed-Use Architecture</li>
             </ul>
           </Section>
 
