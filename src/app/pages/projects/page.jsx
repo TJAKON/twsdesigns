@@ -171,7 +171,7 @@ function page() {
       </motion.div>
 
       <div className="max-w-7xl mx-auto mt-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center uppercase tracking-wider">
+        <h2 className="text-3xl md:text-4xl mb-16 md:mb-10 font-bold text-center uppercase tracking-wider">
           Our Projects
         </h2>
 
@@ -193,15 +193,15 @@ function page() {
                   alt={project.title}
                   width={600}
                   height={400}
-                  className="w-full h-[320px] md:h-[500px] object-contain md:object-fill rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                  className="w-full h-[220px] md:h-[500px] object-cover md:object-fill rounded-none md:rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <div className="w-full md:w-1/2 space-y-4 px-0 md:px-4 text-center md:text-left">
-                <h3 className=" text-lg md:text-xl font-semibold">
+              <div className="w-full md:w-1/2 space-y-4 px-0 md:px-4 text-left md:text-left">
+                <h3 className=" text-xl md:text-xl font-semibold">
                   {project.title}
                 </h3>
-                <p className="text-xs md:text-sm">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mt-4 justify-center md:justify-start">
+                <p className=" hidden md:block text-xs md:text-sm">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mt-4 justify-start md:justify-start">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}

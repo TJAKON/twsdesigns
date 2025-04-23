@@ -46,7 +46,7 @@ export default function SplitScreen() {
       >
         <div className="relative h-full w-full group/inner overflow-hidden">
           <Image
-            src="/banners/banner3.jpg"
+            src="/Images/DiscoverOurExpertise.jpg"
             alt="Sister"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

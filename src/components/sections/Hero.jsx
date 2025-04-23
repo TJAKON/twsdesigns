@@ -17,7 +17,7 @@ const images = [
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[700px] md:h-screen w-full overflow-hidden">
       {/* Background Carousel */}
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -45,7 +45,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Main Content - Bottom Left */}
-      <div className="absolute z-20 bottom-80 left-8 text-center md:bottom-28 md:left-10 md:text-left px-4 max-w-3xl space-y-4">
+      <div className="absolute z-20 bottom-60 left-12 text-center md:bottom-28 md:left-10 md:text-left px-4 max-w-3xl space-y-4">
         <h2 className="text-3xl md:text-7xl font-bold text-clip text-amber-300 uppercase">
           Smarter Layouts
         </h2>

@@ -62,7 +62,7 @@ export default function InteriorDesignSection() {
             viewport={{ once: true }}
             className="grid grid-cols-2 gap-4"
           >
-            {["help1.jpeg", "help2.jpeg", "help3.jpeg", "help4.jpeg"]
+            {["Images/DiscoverOurExpertisefirst.jpg", "Images/DiscoverOurExpertise2.jpg", "Images/DiscoverOurExpertise3.jpg", "Images/DiscoverOurExpertise4.jpg"]
               .reduce((acc, curr, i) => {
                 const col = Math.floor(i / 2);
                 acc[col] = acc[col] || [];
@@ -82,7 +82,7 @@ export default function InteriorDesignSection() {
                           alt={`architecture-${colIndex * 2 + i}`}
                           width={600}
                           height={400}
-                          className="transition-transform duration-300 hover:scale-105 w-full h-auto object-cover"
+                          className="transition-transform duration-300 hover:scale-105 w-full h-[220px] md:h-[350px] object-cover"
                         />
                       </a>
                     </div>

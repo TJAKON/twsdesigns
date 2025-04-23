@@ -15,7 +15,9 @@ const Section = ({ title, children, image, reverse }) => (
     }`}
   >
     <div className="md:w-1/2">
-      <h2 className="text-3xl md:text-5xl font-bold text-green-700 mb-4">{title}</h2>
+      <h2 className="text-3xl md:text-5xl font-bold text-green-700 mb-4">
+        {title}
+      </h2>
       <div className="text-gray-700 text-lg leading-relaxed space-y-4">
         {children}
       </div>
@@ -49,11 +51,19 @@ const Page = () => {
             HOME / SERVICES / TAW PLANNING AND DESIGN SERVICE
           </p>
           <motion.div
-            className="bg-gray-700 mt-8 h-72 w-full rounded-lg"
+            className="mt-8 h-72 w-full rounded-lg overflow-hidden"
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8 }}
-          />
+          >
+            <Image
+              src={"/Images/pd7.jpg"}
+              alt={"test"}
+              width={1000}
+              height={200}
+              className=" w-full h-[300px] md:h-[400px] object-cover "
+            />
+          </motion.div>
         </div>
       </motion.section>
 
@@ -68,7 +78,7 @@ const Page = () => {
             Why Choose TAW Designs?
           </motion.h2>
 
-          <Section title="1. Site Planning" image="/help2.jpeg">
+          <Section title="1. Site Planning" image="/Images/pd4.jpg">
             At TAW Designs, we transform raw land into strategically optimized
             spaces through meticulous site planning. We focus on crafting
             intelligent, functional, and visually compelling layouts that align
@@ -76,7 +86,7 @@ const Page = () => {
             hub, or mixed-use development.
           </Section>
 
-          <Section title="2. Project Planning" image="/help2.jpeg" reverse>
+          <Section title="2. Project Planning" image="/Images/pd2.jpg" reverse>
             With best utilization of residential & commercial spaces, we ensure
             your clients receive spacious carpet areas with efficient and
             thoughtful design. Our project planning maximizes functionality,
@@ -85,14 +95,14 @@ const Page = () => {
 
           <Section
             title="3. Submission & Sanction Drawings"
-            image="/help2.jpeg"
+            image="/Images/pd3.jpg"
           >
             We simplify the sanctioning process for our clients by providing
             precise, regulation-compliant submission drawings. Our streamlined
             approach helps in quick approvals and reduces client workload.
           </Section>
 
-          <Section title="4. Working Drawings" image="/help2.jpeg" reverse>
+          <Section title="4. Working Drawings" image="/Images/pd6.jpg" reverse>
             Looking for detailed working drawings? TAW Designs provides accurate
             construction-ready plans to ensure your project’s execution is
             immediate and effective.
@@ -136,11 +146,6 @@ const Page = () => {
                 img: "/help2.jpeg",
               },
               {
-                title: "Site Sustainability",
-                desc: "Low-impact landscaping and minimal disruption to terrain.",
-                img: "/help2.jpeg",
-              },
-              {
                 title: "Smart Design",
                 desc: "Automated systems for optimal operations and comfort.",
                 img: "/help2.jpeg",
@@ -157,7 +162,7 @@ const Page = () => {
                   alt={title}
                   width={500}
                   height={300}
-                  className="h-[300px] md:h-[400px] object-cover mb-4"
+                  className="h-[250px] md:h-[300px] object-cover mb-4"
                 />
                 <h3 className="text-xl font-bold text-green-700 mb-2">
                   {title}

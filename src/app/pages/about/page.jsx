@@ -17,7 +17,15 @@ export default function Page() {
         <div className="max-w-screen-xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold">ABOUT US</h1>
           <p className="text-sm mt-2">HOME / ABOUT US</p>
-          <div className="bg-[#C0C0C0] mt-8 h-72 w-full rounded-lg"></div>
+          <div className=" mt-8 h-72 w-full overflow-hidden">
+            <Image
+              src={"/Images/AboutUs.jpg"}
+              alt={"test"}
+              width={1000}
+              height={200}
+              className=" w-full h-[300px] md:h-[600px] object-cover "
+            />
+          </div>
         </div>
       </motion.section>
 
@@ -66,11 +74,21 @@ export default function Page() {
               "My best is yet to arrive." – Ar. Sharuti Ranjan
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-2 gap-4">
+            <div className="bg-[#C0C0C0] h-[280px] w-full"></div>
+         
             <div className="bg-[#C0C0C0] h-[280px] w-full"></div>
             <div className="bg-[#C0C0C0] h-[280px] w-full"></div>
             <div className="bg-[#C0C0C0] h-[280px] w-full"></div>
-            <div className="bg-[#C0C0C0] h-[280px] w-full"></div>
+          </div> */}
+          <div className=" w-full overflow-hidden">
+            <Image
+              src={"/Images/AboutUs.jpg"}
+              alt={"test"}
+              width={1000}
+              height={200}
+              className=" w-full h-[300px] md:h-[520px] object-cover "
+            />
           </div>
         </div>
       </section>
@@ -79,7 +97,15 @@ export default function Page() {
       {/* Concept Section */}
       <section className="py-20 bg-[#1F1F1F] text-[#F8F8F8]">
         <div className="max-w-screen-xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
-          <div className="bg-[#C0C0C0] h-[300px] w-full"></div>
+          <div className="w-full overflow-hidden">
+            <Image
+              src={"/Images/creatingspaces.jpg"}
+              alt={"test"}
+              width={1000}
+              height={200}
+              className=" w-full h-[300px] md:h-[424px] object-cover "
+            />
+          </div>
           <div>
             <h5 className="text-[#D4AF37] font-semibold">
               OUR DESIGN APPROACH
@@ -150,8 +176,17 @@ export default function Page() {
             </button>
           </div>
           <div className="grid grid-cols-3 gap-4">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="bg-[#C0C0C0] h-40 w-full"></div>
+            {[...Array(6)].map((_, i) => (
+              // <div key={i} className="bg-[#C0C0C0] h-40 w-full"></div>
+              <div key={i} className=" h-40 w-full overflow-hidden">
+              <Image
+                 src={`/Images/Interior${i + 1}.png`}
+                alt={`Interior${i + 1}.png`}
+                width={1000}
+                height={200}
+                className=" w-full h-[300px] md:h-40 object-cover "
+              />
+            </div>
             ))}
           </div>
         </div>
@@ -162,7 +197,15 @@ export default function Page() {
       <section className="py-20 bg-[#1F1F1F] text-[#F8F8F8]">
         <div className="max-w-screen-xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
           {/* Placeholder for process image or animation */}
-          <div className="bg-[#C0C0C0] h-[300px] w-full"></div>
+          <div className="w-full overflow-hidden">
+            <Image
+              src={"/Images/EFFICIENCY-MEETS-PURPOSE.jpg"}
+              alt={"test"}
+              width={1000}
+              height={200}
+              className=" w-full h-[300px] md:h-[440px] object-cover "
+            />
+          </div>
 
           {/* Content */}
           <div>

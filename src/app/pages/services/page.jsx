@@ -15,13 +15,23 @@ function page() {
       >
         <div className="max-w-screen-xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold">SERVICES</h1>
-          <p className="text-sm mt-2">HOME / SERVICES / ARCHITECTUAL SERVICES</p>
+          <p className="text-sm mt-2">
+            HOME / SERVICES / ARCHITECTUAL SERVICES
+          </p>
           <motion.div
-            className="bg-gray-700 mt-8 h-72 w-full rounded-lg"
+            className=" mt-8 h-72 w-full overflow-hidden rounded-lg"
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8 }}
-          />
+          >
+            <Image
+              src={"/Images/Service.jpg"}
+              alt={"test"}
+              width={1000}
+              height={200}
+              className=" w-full h-[300px] md:h-[400px] object-cover "
+            />
+          </motion.div>
         </div>
       </motion.section>
 
@@ -33,7 +43,7 @@ function page() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
@@ -74,11 +84,11 @@ function page() {
             viewport={{ once: true }}
           >
             <Image
-              src="/help5.jpeg"
+              src="/Images/TransformRightImage.jpg"
               alt="Interior Design"
               width={600}
               height={0}
-              className="w-full h-[500px] rounded-2xl shadow-xl object-cover"
+              className="w-full h-[500px] rounded-lg md:rounded-2xl shadow-xl object-cover"
             />
           </motion.div>
         </div>
@@ -191,7 +201,7 @@ function page() {
         viewport={{ once: true }}
       >
         <div className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-3 md:gap-6">
             {[
               {
                 title: "ARCHITECTURAL DESIGN",
@@ -209,14 +219,14 @@ function page() {
                   "Designing efficient, modern, and inspiring commercial spaces that foster productivity and offer a welcoming atmosphere for clients and employees.",
               },
               {
-                title: "CUSTOM FURNITURE DESIGN",
+                title: "FUTURISTIC DESIGN",
                 description:
-                  "Our bespoke furniture designs are crafted to complement your architectural space with style, functionality, and quality craftsmanship.",
+                  "Our bespoke Futuristic designs are crafted to complement your architectural space with style, functionality, and quality craftsmanship.",
               },
             ].map((service, i) => (
               <motion.div
                 key={i}
-                className={`text-center p-6 ${
+                className={` text-left md:text-center p-4 md:p-6 ${
                   i === 0
                     ? "bg-[#0A0A0A] text-[#F8F8F8]"
                     : "border border-[#C0C0C0] bg-[#1F1F1F] text-[#F8F8F8]"
@@ -225,12 +235,12 @@ function page() {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src={`/help${i + 1}.jpeg`}
+                  src={`/Images/hw${i + 1}.jpg`}
                   alt={service.title}
-                  className="mx-auto mb-4 w-12 h-12 object-cover rounded-full shadow-sm"
+                  className="mx-auto mb-4 w-full md:w-12 h-12 object-cover rounded-lg md:rounded-full shadow-sm"
                 />
-                <h5 className="font-semibold">{service.title}</h5>
-                <p className="text-sm mt-2 text-[#C0C0C0]">
+                <h5 className="font-semibold text-sm md:text-lg">{service.title}</h5>
+                <p className="text-xs md:text-sm mt-2 text-[#C0C0C0]">
                   {service.description}
                 </p>
               </motion.div>
@@ -332,7 +342,7 @@ function page() {
 
           {/* Right Side - Services */}
           <motion.div
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-2  gap-3 md:gap-6"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -362,15 +372,15 @@ function page() {
             ].map((service, i) => (
               <div key={i}>
                 <img
-                  src="/help1.jpeg"
+                  src={`/Images/hw${i + 1}.jpg`}
                   alt={service.title}
-                  className="w-full mb-2 rounded-md"
+                  className="w-full h-[200px] md:h-[300px] mb-2 rounded-md"
                 />
-                <div className="shadow-md p-4 text-center rounded-md bg-[#1F1F1F]">
+                <div className="shadow-md p-3 md:p-4 rounded-md bg-[#1F1F1F]">
                   <h6 className="text-[#D4AF37] font-semibold">
                     {service.title}
                   </h6>
-                  <p className="text-sm text-[#C0C0C0] mt-1">
+                  <p className="text-xs md:text-sm text-[#C0C0C0] mt-1">
                     {service.description}
                   </p>
                 </div>

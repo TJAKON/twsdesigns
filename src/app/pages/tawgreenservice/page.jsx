@@ -45,11 +45,19 @@ export default function Page() {
           <h1 className="text-4xl font-bold">SERVICES</h1>
           <p className="text-sm mt-2">HOME / SERVICES / TAW GREENS</p>
           <motion.div
-            className="bg-gray-700 mt-8 h-72 w-full rounded-lg"
+            className="mt-8 h-72 w-full rounded-lg overflow-hidden"
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8 }}
-          />
+          >
+            <Image
+              src={"/Images/gb1.jpg"}
+              alt={"test"}
+              width={1000}
+              height={200}
+              className=" w-full h-[300px] md:h-[400px] object-cover "
+            />
+          </motion.div>
         </div>
       </motion.section>
 

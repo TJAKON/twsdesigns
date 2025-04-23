@@ -4,7 +4,7 @@ const services = [
   {
     title: "ARCHITECTURAL PLANS",
     description: "Residential & Commercial Planning",
-    image: "/projects/p17.jpg",
+    image: "/Images/archplans1.jpg",
   },
   {
     title: "PLANNING & DESIGN",
@@ -14,7 +14,7 @@ const services = [
   {
     title: "PROJECT MANAGEMENT",
     description: "Execution & Coordination with Experts",
-    image: "/help5.jpeg",
+    image: "/Images/ProjectbackgroundImage.jpg",
   },
   {
     title: "GREEN BUILDING DESIGN",
