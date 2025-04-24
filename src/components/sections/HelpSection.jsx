@@ -1,25 +1,30 @@
 import React from "react";
+import Link from "next/link";
 
 const services = [
   {
     title: "ARCHITECTURAL PLANS",
     description: "Residential & Commercial Planning",
     image: "/Images/archplans1.jpg",
+    href: "/pages/services",
   },
   {
     title: "PLANNING & DESIGN",
     description: "Smart & Sustainable Design Solutions",  
     image: "/banners/i5.jpeg",
+    href: "/pages/planninganddesigningservice",
   },
   {
     title: "PROJECT MANAGEMENT",
     description: "Execution & Coordination with Experts",
     image: "/Images/ProjectbackgroundImage.jpg",
+    href: "/pages/projectmanagementservice",
   },
   {
     title: "GREEN BUILDING DESIGN",
     description: "Sustainable & Biophilic Architecture",
     image: "/projects/p15.jpg",
+    href: "/pages/tawgreenservice",
   },
 ];
 
@@ -55,7 +60,10 @@ export default function HelpSection() {
               {/* Bottom Text */}
               <div className="absolute bottom-6 text-[#F8F8F8] pl-4 bg-[#1F1F1F] bg-opacity-80 w-full py-4">
                 <h3 className="text-md font-medium">{item.description}</h3>
-                <p className="mt-1 text-sm tracking-wider text-[#C0C0C0]">READ MORE &gt;</p>
+                {/* <p className="mt-1 text-sm tracking-wider text-[#C0C0C0]">READ MORE &gt;</p> */}
+                <Link href={item.href} className="mt-1 text-sm tracking-wider text-[#C0C0C0]">
+                READ MORE &gt;
+                </Link>
               </div>
             </div>
           ))}

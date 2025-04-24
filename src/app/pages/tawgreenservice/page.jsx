@@ -51,7 +51,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src={"/Images/gb1.jpg"}
+              src={"/services/8.jpg"}
               alt={"test"}
               width={1000}
               height={200}
@@ -76,7 +76,7 @@ export default function Page() {
           {/* Sections */}
           <Section
             title="Introduction to Green Building Concept"
-            image="/help1.jpeg"
+            image="/services/16.jpg"
           >
             The design, construction, and operation of environmentally conscious
             and resource-efficient structures are referred to as the{" "}
@@ -86,7 +86,7 @@ export default function Page() {
             working environments.
           </Section>
 
-          <Section title="Why TAW Designs?" image="/help1.jpeg" reverse>
+          <Section title="Why TAW Designs?" image="/services/21.jpg" reverse>
             TAW Designs Pvt. Ltd. is one of the leading green architecture firms
             in Pune and Mumbai, supporting the Green Building Concept by
             designing environmentally responsible, energy-efficient, and
@@ -99,7 +99,7 @@ export default function Page() {
             eco-friendly designs.
           </Section>
 
-          <Section title="Benefits of Green Buildings" image="/help1.jpeg">
+          <Section title="Benefits of Green Buildings" image="/services/20.jpg">
             <ul className="list-disc list-inside space-y-2 text-gray-700 text-lg">
               <li>Lower operating costs (energy & water savings)</li>
               <li>Healthier living/working spaces (better air quality)</li>
@@ -121,7 +121,7 @@ export default function Page() {
           </motion.h2>
 
           {/* Principles Grid */}
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid  gap-4 md:gap-10 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Energy Efficiency",
@@ -149,11 +149,6 @@ export default function Page() {
                 img: "/help1.jpeg",
               },
               {
-                title: "Site Sustainability",
-                desc: "Structures that blend with the landscape, support native planting, and minimize land disturbance.",
-                img: "/help1.jpeg",
-              },
-              {
                 title: "Smart Building Design",
                 desc: "Automation and smart energy systems ensure efficient building operations.",
                 img: "/help1.jpeg",
@@ -167,13 +162,13 @@ export default function Page() {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Image
+                {/* <Image
                   src={img}
                   alt={title}
                   width={500}
                   height={300}
                   className=" h-[300px] md:h-[450px] object-cover mb-4"
-                />
+                /> */}
                 <h3 className="text-xl font-bold text-green-600 mb-2">
                   {title}
                 </h3>

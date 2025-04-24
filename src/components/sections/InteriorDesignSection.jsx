@@ -76,7 +76,7 @@ export default function InteriorDesignSection() {
                       key={img}
                       className="overflow-hidden shadow-sm border border-[#C0C0C0]"
                     >
-                      <a href={`/${img}`} data-fslightbox="gallery-1">
+                      {/* <a href={`/${img}`} data-fslightbox="gallery-1"> */}
                         <Image
                           src={`/${img}`}
                           alt={`architecture-${colIndex * 2 + i}`}
@@ -84,7 +84,7 @@ export default function InteriorDesignSection() {
                           height={400}
                           className="transition-transform duration-300 hover:scale-105 w-full h-[220px] md:h-[350px] object-cover"
                         />
-                      </a>
+                      {/* </a> */}
                     </div>
                   ))}
                 </div>

@@ -73,7 +73,7 @@ const Page = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-extrabold mb-16 text-green-700 text-center"
+            className="text-4xl md:text-5xl font-extrabold mb-16 text-green-700 text-center uppercase"
           >
             Why Choose TAW Designs?
           </motion.h2>
@@ -113,7 +113,7 @@ const Page = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className=" text-3xl md:text-5xl font-bold text-green-700 my-10 md:my-20 text-center"
+            className=" text-3xl md:text-5xl font-bold text-green-700 my-10 md:my-20 text-center uppercase"
           >
             Core Principles of Green Building
           </motion.h2>
@@ -157,13 +157,13 @@ const Page = () => {
                 transition={{ duration: 0.3 }}
                 className="bg-white border border-gray-200 p-6 shadow-md hover:shadow-xl"
               >
-                <Image
+                {/* <Image
                   src={img}
                   alt={title}
                   width={500}
                   height={300}
                   className="h-[250px] md:h-[300px] object-cover mb-4"
-                />
+                /> */}
                 <h3 className="text-xl font-bold text-green-700 mb-2">
                   {title}
                 </h3>

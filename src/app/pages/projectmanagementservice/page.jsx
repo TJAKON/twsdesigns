@@ -111,7 +111,7 @@ export default function Page() {
 
           <Section
             title="Our Approach to Sustainable & Compliant Development"
-           image="/Images/pm3.jpg"
+           image="/services/2.jpg"
           >
             We specialize in delivering{" "}
             <strong>timely and economical construction solutions</strong> with a

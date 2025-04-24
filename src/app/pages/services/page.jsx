@@ -25,7 +25,7 @@ function page() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src={"/Images/Service.jpg"}
+              src={"/Images/pd6.jpg"}
               alt={"test"}
               width={1000}
               height={200}
@@ -113,7 +113,7 @@ function page() {
             functional, and emotionally resonant spaces.
           </p>
 
-          <div className="space-y-14">
+          <div className=" space-y-6 md:space-y-12">
             {[
               {
                 title: "Architectural Plans",

@@ -33,26 +33,29 @@ const services = [
 const premiumservices = [
   {
     name: "Architectural Plans",
-    description: "Tailored residential and commercial building plans with precision.",
+    description:
+      "Tailored residential and commercial building plans with precision.",
     href: "/pages/services",
   },
   {
     name: "Planning & Designing",
-    description: "Comprehensive site planning, project layout, and sanctioned drawings.",
+    description:
+      "Comprehensive site planning, project layout, and sanctioned drawings.",
     href: "/pages/planninganddesigningservice",
   },
   {
     name: "Project Management",
-    description: "From 3D visualizations to commercial and landscape design solutions.",
+    description:
+      "From 3D visualizations to commercial and landscape design solutions.",
     href: "/pages/projectmanagementservice",
   },
   {
     name: "Green Building Design",
-    description: "Eco-conscious architecture with sustainable design principles.",
+    description:
+      "Eco-conscious architecture with sustainable design principles.",
     href: "/pages/tawgreenservice",
   },
 ];
-
 
 const callsToAction = [
   {
@@ -68,6 +71,12 @@ const callsToAction = [
 ];
 
 const navigation = [
+  { name: "Projects", href: "/pages/projects" },
+  { name: "About", href: "/pages/about" },
+  { name: "Contact Us", href: "/pages/contact" },
+];
+const navigationmobile = [
+  { name: "home", href: "/" },
   { name: "Projects", href: "/pages/projects" },
   { name: "About", href: "/pages/about" },
   { name: "Contact Us", href: "/pages/contact" },
@@ -212,7 +221,7 @@ export default function Header() {
         <div className="off-canvas__inner py-2 px-5 bg-black border-b-2 border-[#683e2a]">
           <div className="flex justify-between">
             <div className="logo">
-            <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <img
                   src="/logo1.png"
                   alt="TAW Designs Logo"
@@ -228,82 +237,44 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div className="off-canvas__inner p-5">
+        <div className="off-canvas__inner py-5 px-7">
           <nav className="off-canvas__nav">
-            <ul className="space-y-6">
-              <li className={pathname === "/" ? "active" : ""}>
-                <Link
-                  href="/"
-                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
-                  onClick={toggleMobileMenu}
-                >
-                  Home
-                </Link>
-              </li>
-              <li className={pathname === "/pages/projects" ? "active" : ""}>
-                <Link
-                  href="/pages/projects"
-                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
-                  onClick={toggleMobileMenu}
-                >
-                  Projects
-                </Link>
-              </li>
-              <li className={pathname === "/pages/about" ? "active" : ""}>
-                <Link
-                  href="/pages/about"
-                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
-                  onClick={toggleMobileMenu}
-                >
-                  About
-                </Link>
-              </li>
-              <li className={pathname === "/pages/contact" ? "active" : ""}>
-                <Link
-                  href="/pages/contact"
-                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
-                  onClick={toggleMobileMenu}
-                >
-                  Contact
-                </Link>
-              </li>
-              <li className={pathname === "/pages/services" ? "active" : ""}>
-                <Link
-                  href="/pages/services"
-                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
-                  onClick={toggleMobileMenu}
-                >
+      
+            <PopoverGroup className=" lg:gap-x-12 text-lg font-medium">
+              {navigationmobile.map((item) => (
+                <ul className="space-y-6">
+                  <li className="uppercase text-md pb-5">
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="text-white hover:text-[#eed3b8]"
+                      onClick={toggleMobileMenu}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                </ul>
+              ))}
+
+              <Popover className="relative">
+                <PopoverButton className="flex items-center uppercase justify-between w-full gap-x-1 text-white hover:text-[#eed3b8] focus:outline-none ">
                   Services
-                </Link>
-              </li>
-              <li className={pathname === "/pages/tawgreenservices" ? "active" : ""}>
-                <Link
-                  href="/pages/tawgreenservice"
-                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
-                  onClick={toggleMobileMenu}
+                  <ChevronDownIcon className="h-5 w-5" />
+                </PopoverButton>
+                <PopoverPanel
+                  transition
+                  className=" p-4 transition-opacity duration-300 ease-in-out"
                 >
-                  TAW Greens
-                </Link>
-              </li>
-              <li className={pathname === "/pages/projectmanagementservice" ? "active" : ""}>
-                <Link
-                  href="/pages/projectmanagementservice"
-                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
-                  onClick={toggleMobileMenu}
-                >
-                TAW Project & Management
-                </Link>
-              </li>
-              <li className={pathname === "/pages/planninganddesigningservice" ? "active" : ""}>
-                <Link
-                  href="/pages/planninganddesigningservice"
-                  className="text-white text-2xl hover:text-[#a99115] transition-colors"
-                  onClick={toggleMobileMenu}
-                >
-                TAW Planning & Designing
-                </Link>
-              </li>
-            </ul>
+                  {premiumservices.map((item) => (
+                    <div key={item.name} className="flex flex-col p-2">
+                      <Link href={item.href} className=" uppercase">
+                        {item.name}
+                      </Link>
+                    </div>
+                  ))}
+                </PopoverPanel>
+              </Popover>
+            </PopoverGroup>
           </nav>
         </div>
         {/* <div className="off-canvas__footer absolute bottom-0 w-full p-8 bg-black">

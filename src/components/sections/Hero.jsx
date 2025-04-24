@@ -17,7 +17,7 @@ const images = [
 
 const Hero = () => {
   return (
-    <section className="relative h-[700px] md:h-screen w-full overflow-hidden">
+    <section className="relative h-[750px] md:h-screen w-full overflow-hidden">
       {/* Background Carousel */}
       <Swiper
         modules={[Autoplay, EffectFade]}
