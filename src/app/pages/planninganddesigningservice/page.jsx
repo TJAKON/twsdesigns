@@ -118,7 +118,7 @@ const Page = () => {
             Core Principles of Green Building
           </motion.h2>
 
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:gap-10 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Energy Efficiency",

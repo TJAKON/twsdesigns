@@ -239,7 +239,6 @@ export default function Header() {
         </div>
         <div className="off-canvas__inner py-5 px-7">
           <nav className="off-canvas__nav">
-      
             <PopoverGroup className=" lg:gap-x-12 text-lg font-medium">
               {navigationmobile.map((item) => (
                 <ul className="space-y-6">
@@ -267,7 +266,11 @@ export default function Header() {
                 >
                   {premiumservices.map((item) => (
                     <div key={item.name} className="flex flex-col p-2">
-                      <Link href={item.href} className=" uppercase">
+                      <Link
+                        href={item.href}
+                        className=" uppercase"
+                        onClick={toggleMobileMenu}
+                      >
                         {item.name}
                       </Link>
                     </div>
