@@ -1,32 +1,63 @@
 "use client";
 
-import React from "react";
-import { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-function page() {
+function Page() {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const validateForm = (data) => {
+    const { from_name, from_email, phone, subject, message } = data;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9]{10}$/; // basic 10-digit phone validation
+
+    if (!from_name.trim() || !from_email.trim() || !phone.trim() || !subject.trim() || !message.trim()) {
+      alert("Please fill out all fields.");
+      return false;
+    }
+
+    if (!emailRegex.test(from_email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    if (!phoneRegex.test(phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return false;
+    }
+
+    return true;
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const formData = new FormData(form.current);
+    const data = Object.fromEntries(formData.entries());
+
+    if (!validateForm(data)) return;
+
+    setLoading(true);
 
     emailjs
       .sendForm(
-        "your_service_id", // replace
-        "your_template_id", // replace
+        "service_3wk43r3",
+        "template_ufk60dg",
         form.current,
-        "your_public_key" // replace
+        "--YWdlLYSsy0lrkJ_"
       )
       .then(
         (result) => {
           console.log("Email successfully sent!", result.text);
-          alert("Message sent successfully!");
+          alert("✅ Message sent successfully! We will get back to you shortly.");
           form.current.reset();
+          setLoading(false);
         },
         (error) => {
           console.error("Email send error:", error.text);
-          alert("Failed to send message. Please try again.");
+          alert("❌ Failed to send message. Please try again.");
+          setLoading(false);
         }
       );
   };
@@ -42,12 +73,12 @@ function page() {
       >
         <div className="max-w-screen-xl mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold">Contact Us</h1>
-          <p className="text-sm mt-2">HOME / CONTACT Us</p>
-          <div className=" mt-8 h-72 w-full overflow-hidden">
+          <p className="text-sm mt-2">HOME / CONTACT US</p>
+          <div className="mt-8 h-72 w-full overflow-hidden">
             <img
-              src={"/images/top-view-work-desk-with-laptop-blueprints.jpg"}
-              alt={"test"}
-              className=" w-full h-[300px] md:h-[600px] object-cover "
+              src="/images/top-view-work-desk-with-laptop-blueprints.jpg"
+              alt="Work desk"
+              className="w-full h-[300px] md:h-[600px] object-cover"
             />
           </div>
         </div>
@@ -56,7 +87,7 @@ function page() {
       {/* Contact Section */}
       <div className="bg-black py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left Text Section */}
+          {/* Contact Info */}
           <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: -30 }}
@@ -65,7 +96,7 @@ function page() {
           >
             <h2 className="text-4xl font-bold text-white">Let’s Connect</h2>
             <p className="text-lg text-white/90">
-              We’d love to collaborate with you on your next project...
+              We’d love to collaborate with you on your next project. Reach out and let's talk.
             </p>
             <div className="mt-8 space-y-4 text-white">
               <p className="flex items-center gap-2">
@@ -83,7 +114,7 @@ function page() {
             </div>
           </motion.div>
 
-          {/* Form Section */}
+          {/* Contact Form */}
           <motion.form
             ref={form}
             onSubmit={sendEmail}
@@ -101,7 +132,7 @@ function page() {
                 name="from_name"
                 placeholder="Your Name"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-accent bg-white text-black"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl bg-white text-black focus:ring-2 focus:ring-accent"
               />
             </div>
             <div>
@@ -113,7 +144,19 @@ function page() {
                 name="from_email"
                 placeholder="you@example.com"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-accent bg-white text-black"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl bg-white text-black focus:ring-2 focus:ring-accent"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-white mb-1">
+                Phone
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+91 9876543210"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl bg-white text-black focus:ring-2 focus:ring-accent"
               />
             </div>
             <div>
@@ -123,19 +166,16 @@ function page() {
               <select
                 name="subject"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-accent bg-white text-black"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl bg-white text-black focus:ring-2 focus:ring-accent"
                 defaultValue=""
               >
-                <option value="" disabled>
-                  Select a service
-                </option>
+                <option value="" disabled>Select a subject</option>
                 <option value="Architecture Design">Architecture Design</option>
-                <option value="Interior Design">Planning and Desiging</option>
+                <option value="Planning and Designing">Planning and Designing</option>
+                <option value="Green Building Design">Green Building Design</option>
                 <option value="Project Management">Project Management</option>
-                <option value="Turnkey Solutions">Green Building Design</option>
-                <option value="Consultation Services">
-                  Consultation service{" "}
-                </option>
+                <option value="Consultation Services">Consultation Services</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div>
@@ -147,15 +187,20 @@ function page() {
                 rows={4}
                 placeholder="Your message..."
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-accent bg-white text-black"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl bg-white text-black focus:ring-2 focus:ring-accent"
               ></textarea>
             </div>
             <motion.button
               type="submit"
-              className="w-full bg-accent/90 text-white font-semibold py-3 rounded-xl hover:bg-accent transition"
-              whileHover={{ scale: 1.03 }}
+              disabled={loading}
+              className={`w-full text-white font-semibold py-3 rounded-xl transition ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-accent/90 hover:bg-accent"
+              }`}
+              whileHover={!loading ? { scale: 1.03 } : {}}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </motion.button>
           </motion.form>
         </div>
@@ -164,4 +209,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
