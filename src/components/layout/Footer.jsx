@@ -13,11 +13,9 @@ export const Footer = () => {
         {/* Left Section - Brand & About */}
         <div>
           <Link href="/" className="flex items-center">
-            <Image
-              src="/logo1.png"
+            <img
+              src="/images/logo1.png"
               alt="TAW Designs Logo"
-              width={100}
-              height={100}
               className="w-auto h-24 md:h-24"
             />
             <span className="text-lg md:text-2xl bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent leading-tight">
@@ -58,15 +56,15 @@ export const Footer = () => {
             <p className="flex items-center">
               <EnvelopeIcon className="h-5 w-5 mr-2 text-[#D4AF37]" />
               <a
-                href="mailto:info@tawdesigns.com"
+                href="mailto:taw.architecture@gmail.com"
                 className="hover:text-[#F8F8F8]"
               >
-                info@tawdesigns.com
+                taw.architecture@gmail.com
               </a>
             </p>
             <p className="flex items-center">
               <PhoneIcon className="h-5 w-5 mr-2 text-[#D4AF37]" />
-              +91 9876543210
+              +91 7507099004
             </p>
             <p className="flex items-center">
               <MapPinIcon className="h-5 w-5 mr-2 text-[#D4AF37]" />

@@ -7,29 +7,29 @@ const projects = [
   {
     title: "PROJECT & COST ANALYSIS",
     subtitle: "We take care of your",
-    image: "/banners/i1.jpeg",
-    href: "/pages/projects",
+    image: "/images/i1.jpg",
+    href: "/pages/planninganddesigningservice",
     color: "text-white",
   },
   {
     title: "ARCHITECTURAL DESIGN",
     subtitle: "Modern & Elegant",
-    image: "/banners/i4.jpeg",
-    href: "/pages/projects",
+    image: "/images/i4.jpg",
+    href: "/pages/services",
     color: "text-white",
   },
   {
     title: "CONSULTANCY & COORDINATION",
     subtitle: "Innovative Concepts",
-    image: "/banners/i3.jpeg",
-    href: "/pages/projects",
+    image: "/images/i3.jpg",
+    href: "/pages/tawgreenservice",
     color: "text-white",
   },
   {
     title: "PROJECT MANAGEMENT & EXECUTION",
     subtitle: "Comfort Meets Style",
-    image: "/banners/i2.jpeg",
-    href: "/pages/projects",
+    image: "/images/i2.jpg",
+    href: "/pages/projectmanagementservice",
     color: "text-white",
   },
 ];
@@ -52,11 +52,10 @@ export default function ProjectShowcase() {
           `}
         >
           <div className="absolute inset-0 overflow-hidden">
-            <Image
+            <img
               src={proj.image}
               alt={proj.title}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              className=" w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-500 flex flex-col justify-center items-start p-6 md:p-8 text-left">
               <p className={`text-md md:text-xl font-light ${proj.color}`}>{proj.subtitle}</p>

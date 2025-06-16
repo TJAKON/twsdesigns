@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 
@@ -5,25 +6,25 @@ const services = [
   {
     title: "ARCHITECTURAL PLANS",
     description: "Residential & Commercial Planning",
-    image: "/Images/archplans1.jpg",
+    image: "/images/archplans1.jpg",
     href: "/pages/services",
   },
   {
     title: "PLANNING & DESIGN",
     description: "Smart & Sustainable Design Solutions",  
-    image: "/banners/i5.jpeg",
+    image: "/images/i5.jpg",
     href: "/pages/planninganddesigningservice",
   },
   {
     title: "PROJECT MANAGEMENT",
     description: "Execution & Coordination with Experts",
-    image: "/Images/ProjectbackgroundImage.jpg",
+    image: "/images/ProjectbackgroundImage.jpg",
     href: "/pages/projectmanagementservice",
   },
   {
     title: "GREEN BUILDING DESIGN",
     description: "Sustainable & Biophilic Architecture",
-    image: "/projects/p15.jpg",
+    image: "/images/p15.jpg",
     href: "/pages/tawgreenservice",
   },
 ];

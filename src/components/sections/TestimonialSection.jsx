@@ -6,63 +6,66 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
+import { ImageConfigContext } from "next/dist/shared/lib/image-config-context.shared-runtime";
 
 const partnerLogos = [
-  { id: 1, image: "/logo/l1.png", name: "Partner 1" },
-  { id: 2, image: "/logo/l2.png", name: "Partner 2" },
-  { id: 3, image: "/logo/l3.png", name: "Partner 3" },
-  { id: 4, image: "/logo/l4.png", name: "Partner 4" },
-  { id: 5, image: "/logo/l5.png", name: "Partner 5" },
-  // { id: 6, image: "/logo/l6.png", name: "Partner 6" },
-  // { id: 7, image: "/logo/l7.png", name: "Partner 7" },
-  // { id: 8, image: "/logo/l8.png", name: "Partner 8" },
-  // { id: 9, image: "/logo/l9.png", name: "Partner 9" },
-  // { id: 10, image: "/logo/l10.png", name: "Partner 10" },
-  // { id: 11, image: "/logo/l11.png", name: "Partner 11" },
-  // { id: 12, image: "/logo/l12.png", name: "Partner 12" },
+  { id: 1, image: "/images/l1.png", name: "Partner 1" },
+  { id: 2, image: "/images/l2.png", name: "Partner 2" },
+  { id: 3, image: "/images/l3.png", name: "Partner 3" },
+  { id: 4, image: "/images/l4.png", name: "Partner 4" },
+  { id: 5, image: "/images/l5.png", name: "Partner 5" },
+  { id: 6, image: "/images/ajmera.jpg", name: "Partner 6" },
+  { id: 7, image: "/images/tattvalogo.jpg", name: "Partner 7" },
+  // { id: 6, image: "/l6.png", name: "Partner 6" },
+  // { id: 7, image: "/l7.png", name: "Partner 7" },
+  // { id: 8, image: "/l8.png", name: "Partner 8" },
+  // { id: 9, image: "/l9.png", name: "Partner 9" },
+  // { id: 10, image: "/l10.png", name: "Partner 10" },
+  // { id: 11, image: "/l11.png", name: "Partner 11" },
+  // { id: 12, image: "/l12.png", name: "Partner 12" },
 ];
 
 const testimonials = [
-  {
-    name: "Harish Varu",
-    location: "Lonavala",
-    quote:
-      "TAW Designs brought elegance and innovation to our space. Truly impressive work!",
-    image: "/logo/l1.png",
-  },
+  // {
+  //   name: "Harish Varu",
+  //   location: "Lonavala",
+  //   quote:
+  //     "TAW Designs brought elegance and innovation to our space. Truly impressive work!",
+  //   image: "/images/l1.png",
+  // },
   {
     name: "Jefro Reality",
     location: "Mamurdie",
     quote:
       "Their creative vision aligned perfectly with our goals. Highly recommended!",
-    image: "/logo/l2.png",
+    image: "/images/l1.png",
   },
-  {
-    name: "Mohak City",
-    location: "Virar",
-    quote:
-      "Mohak City’s identity was enhanced by their sophisticated touch. Great collaboration!",
-    image: "/logo/l3.png",
-  },
-  {
-    name: "Vilas Nandgude",
-    location: "Pimple Nilakh",
-    quote: "TAW Designs turned our ideas into functional and beautiful spaces.",
-    image: "/logo/l4.png",
-  },
+  // {
+  //   name: "Mohak City",
+  //   location: "Virar",
+  //   quote:
+  //     "Mohak City’s identity was enhanced by their sophisticated touch. Great collaboration!",
+  //   image: "/images/l3.png",
+  // },
+  // {
+  //   name: "Vilas Nandgude",
+  //   location: "Pimple Nilakh",
+  //   quote: "TAW Designs turned our ideas into functional and beautiful spaces.",
+  //   image: "/images/l4.png",
+  // },
   {
     name: "Aahan Builders",
     location: "Kothrud and Donjhe",
     quote:
       "We’ve worked with many teams — TAW Designs stands out in professionalism and delivery.",
-    image: "/logo/l5.png",
+    image: "/images/l4.png",
   },
   {
     name: "Ajmera Builders",
     location: "Chembur and Indore",
     quote:
       "Their unique design sense added immense value to our projects in multiple cities.",
-    image: "/logo/l5.png",
+    image: "/images/ajmera.jpg",
   },
 ];
 
@@ -132,12 +135,10 @@ export default function TestimonialSection() {
                   viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-6">
-                    <Image
+                    <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      width={64}
-                      height={64}
-                      className="rounded-full object-cover mr-4 border-2 border-[#e0b378]"
+                      className=" object-cover mr-4 h-8"
                     />
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900">
@@ -184,11 +185,9 @@ export default function TestimonialSection() {
           >
             {partnerLogos.map((partner) => (
               <SwiperSlide key={partner.id}>
-                <Image
+                <img
                   src={partner.image}
                   alt={partner.name}
-                  width={100}
-                  height={60}
                   className="w-full h-24 object-contain mx-auto"
                 />
               </SwiperSlide>

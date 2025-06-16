@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function InteriorDesignSection() {
@@ -35,21 +34,28 @@ export default function InteriorDesignSection() {
             {/* Section for Innovative Concepts */}
             <div>
               <h5 className="text-[#D4AF37] font-semibold text-base mb-1">
-              Our Design Efficiency 
+                Our Design Efficiency
               </h5>
               <p className="text-[#C0C0C0] text-sm md:text-base">
-              We ensures optimal use of resources, time, and budget, minimizing waste and streamlining workflows for faster project delivery. 
+                We ensures optimal use of resources, time, and budget,
+                minimizing waste and streamlining workflows for faster project
+                delivery.
               </p>
             </div>
 
             {/* Section for Tailored Aesthetics */}
             <div>
               <h5 className="text-[#D4AF37] font-semibold text-base mb-1">
-              Our Design Efficacy
+                Our Design Efficacy
               </h5>
               <p className="text-[#C0C0C0] text-sm md:text-base">
-              We are focusing on functional, aesthetic, and sustainable outcomes, we create cost-effective, high-performing architectural solutions for residential, commercial, and mixed-use projects in Pune, Mumbai, and Maharashtra. Our designs enhance usability, energy efficiency, and long-term value, ensuring eco-friendly construction and sustainable architecture that align with the client’s vision and goals.
-
+                We are focusing on functional, aesthetic, and sustainable
+                outcomes, we create cost-effective, high-performing
+                architectural solutions for residential, commercial, and
+                mixed-use projects in Pune, Mumbai, and Maharashtra. Our designs
+                enhance usability, energy efficiency, and long-term value,
+                ensuring eco-friendly construction and sustainable architecture
+                that align with the client’s vision and goals.
               </p>
             </div>
           </motion.div>
@@ -62,7 +68,12 @@ export default function InteriorDesignSection() {
             viewport={{ once: true }}
             className="grid grid-cols-2 gap-4"
           >
-            {["Images/DiscoverOurExpertisefirst.jpg", "Images/DiscoverOurExpertise2.jpg", "Images/DiscoverOurExpertise3.jpg", "Images/DiscoverOurExpertise4.jpg"]
+            {[
+              "images/DiscoverOurExpertisefirst.jpg",
+              "images/DiscoverOurExpertise2.jpg",
+              "images/DiscoverOurExpertise3.jpg",
+              "images/DiscoverOurExpertise4.jpg",
+            ]
               .reduce((acc, curr, i) => {
                 const col = Math.floor(i / 2);
                 acc[col] = acc[col] || [];
@@ -76,15 +87,11 @@ export default function InteriorDesignSection() {
                       key={img}
                       className="overflow-hidden shadow-sm border border-[#C0C0C0]"
                     >
-                      {/* <a href={`/${img}`} data-fslightbox="gallery-1"> */}
-                        <Image
-                          src={`/${img}`}
-                          alt={`architecture-${colIndex * 2 + i}`}
-                          width={600}
-                          height={400}
-                          className="transition-transform duration-300 hover:scale-105 w-full h-[220px] md:h-[350px] object-cover"
-                        />
-                      {/* </a> */}
+                      <img
+                        src={`/${img}`}
+                        alt={`architecture-${colIndex * 2 + i}`}
+                        className="transition-transform duration-300 hover:scale-105 w-full h-[220px] md:h-[350px] object-cover"
+                      />
                     </div>
                   ))}
                 </div>

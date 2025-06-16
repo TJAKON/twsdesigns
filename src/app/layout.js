@@ -3,7 +3,6 @@ import "../styles/globals.css";
 import Header from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -15,13 +14,30 @@ import { Footer } from "@/components/layout/Footer";
 // });
 
 export const metadata = {
-  title: "TAW Designs",
+  title: "TAW DESIGNS & ARCHITECTS",
+  description: "Smarter Layouts, Larger Possibilities",
   icons: {
-    icon: "/logo1.png",
-    shortcut: "/logo1.png",
+    icon: "/images/logo1.png",
+    shortcut: "/images/logo1.png",
   },
   keywords: [
     "TAW Designs",
+    "TAW Architects",
+    "TAW Architecture",
+    "TAW Interior Design",
+    "TAW Pune",
+    "TAW India",
+    "TAW Residential Design",
+    "TAW Commercial Design",
+    "TAW Eco-friendly Architecture",
+    "TAW Smart Design Solutions",
+    "TAW Project Management",
+    "TAW Green Building Design",
+    "TAW Sustainable Architecture",
+    "TAW Biophilic Design",
+    "TAW Smart Design",
+    "TAW Sustainable Design",
+    "TAW Architectural Services",
     "Architecture",
     "Interior Design",
     "Pune",
@@ -31,18 +47,17 @@ export const metadata = {
     "Eco-friendly Architecture",
     "Smart Design Solutions",
   ],
-  description:
-    "Smarter Layouts, Larger Possibilities",
+  description: "Smarter Layouts, Larger Possibilities",
 };
-
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      {/* <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}> */}
-      <Header />
-      <body className="bg-white text-black antialiased">{children}</body>
-      <Footer />
+    <html lang="en" suppressHydrationWarning="true" data-qb-installed="true">
+      <body className="bg-white text-black antialiased">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

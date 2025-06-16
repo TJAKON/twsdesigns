@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Page() {
@@ -18,11 +17,9 @@ export default function Page() {
           <h1 className="text-4xl font-bold">ABOUT US</h1>
           <p className="text-sm mt-2">HOME / ABOUT US</p>
           <div className=" mt-8 h-72 w-full overflow-hidden">
-            <Image
-              src={"/Images/AboutUs.jpg"}
+            <img
+              src={"/images/AboutUs.jpg"}
               alt={"test"}
-              width={1000}
-              height={200}
               className=" w-full h-[300px] md:h-[600px] object-cover "
             />
           </div>
@@ -82,11 +79,9 @@ export default function Page() {
             <div className="bg-[#C0C0C0] h-[280px] w-full"></div>
           </div> */}
           <div className=" w-full overflow-hidden">
-            <Image
-              src={"/Images/AboutUs.jpg"}
+            <img
+              src={"/images/AboutUs.jpg"}
               alt={"test"}
-              width={1000}
-              height={200}
               className=" w-full h-[300px] md:h-[520px] object-cover "
             />
           </div>
@@ -98,11 +93,9 @@ export default function Page() {
       <section className="py-20 bg-[#1F1F1F] text-[#F8F8F8]">
         <div className="max-w-screen-xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
           <div className="w-full overflow-hidden">
-            <Image
-              src={"/Images/creatingspaces.jpg"}
+            <img
+              src={"/images/creatingspaces.jpg"}
               alt={"test"}
-              width={1000}
-              height={200}
               className=" w-full h-[300px] md:h-[424px] object-cover "
             />
           </div>
@@ -179,14 +172,12 @@ export default function Page() {
             {[...Array(6)].map((_, i) => (
               // <div key={i} className="bg-[#C0C0C0] h-40 w-full"></div>
               <div key={i} className=" h-40 w-full overflow-hidden">
-              <Image
-                 src={`/Images/Interior${i + 1}.png`}
-                alt={`Interior${i + 1}.png`}
-                width={1000}
-                height={200}
-                className=" w-full h-[300px] md:h-40 object-cover "
-              />
-            </div>
+                <img
+                  src={`/images/Interior${i + 1}.jpg`}
+                  alt={`Interior${i + 1}.jpg`}
+                  className=" w-full h-[300px] md:h-40 object-cover "
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -198,11 +189,9 @@ export default function Page() {
         <div className="max-w-screen-xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
           {/* Placeholder for process image or animation */}
           <div className="w-full overflow-hidden">
-            <Image
-              src={"/Images/EFFICIENCY-MEETS-PURPOSE.jpg"}
+            <img
+              src={"/images/EFFICIENCY-MEETS-PURPOSE.jpg"}
               alt={"test"}
-              width={1000}
-              height={200}
               className=" w-full h-[300px] md:h-[440px] object-cover "
             />
           </div>

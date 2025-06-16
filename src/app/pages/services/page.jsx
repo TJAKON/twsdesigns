@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 function page() {
@@ -24,11 +23,9 @@ function page() {
             animate={{ scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Image
-              src={"/Images/pd6.jpg"}
+            <img
+              src={"/images/pd6.jpg"}
               alt={"test"}
-              width={1000}
-              height={200}
               className=" w-full h-[300px] md:h-[400px] object-cover "
             />
           </motion.div>
@@ -83,11 +80,9 @@ function page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Image
-              src="/Images/TransformRightImage.jpg"
+            <img
+              src="/images/TransformRightImage.jpg"
               alt="Interior Design"
-              width={600}
-              height={0}
               className="w-full h-[500px] rounded-lg md:rounded-2xl shadow-xl object-cover"
             />
           </motion.div>
@@ -235,7 +230,7 @@ function page() {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src={`/Images/hw${i + 1}.jpg`}
+                  src={`/images/hw${i + 1}.jpg`}
                   alt={service.title}
                   className="mx-auto mb-4 w-full md:w-12 h-12 object-cover rounded-lg md:rounded-full shadow-sm"
                 />
@@ -372,7 +367,7 @@ function page() {
             ].map((service, i) => (
               <div key={i}>
                 <img
-                  src={`/Images/hw${i + 1}.jpg`}
+                  src={`/images/hw${i + 1}.jpg`}
                   alt={service.title}
                   className="w-full h-[200px] md:h-[300px] mb-2 rounded-md"
                 />

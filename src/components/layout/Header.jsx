@@ -12,24 +12,6 @@ import {
 } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-const services = [
-  {
-    id: 1,
-    name: "Architectural Design",
-    description: "Conceptual and detailed architectural planning.",
-    link: "/",
-    // icon: <YourIconComponent />,
-  },
-  {
-    id: 2,
-    name: "Interior Design",
-    description: "Creative and functional interior solutions.",
-    link: "/",
-    // icon: <YourIconComponent />,
-  },
-  // Add more...
-];
-
 const premiumservices = [
   {
     name: "Architectural Plans",
@@ -60,12 +42,12 @@ const premiumservices = [
 const callsToAction = [
   {
     name: "Book Consultation",
-    href: "/contact",
+    href: "/pages/contact",
     // icon: CalendarIcon,
   },
   {
     name: "Get Quote",
-    href: "/quote",
+    href: "/pages/contact",
     // icon: CurrencyRupeeIcon,
   },
 ];
@@ -111,7 +93,7 @@ export default function Header() {
             <div className="logo f">
               <Link href="/" className="flex items-center">
                 <img
-                  src="/logo1.png"
+                  src="/images/logo1.png"
                   alt="TAW Designs Logo"
                   className="w-auto h-16 md:h-24"
                 />
@@ -128,61 +110,65 @@ export default function Header() {
                 <Link href="/" className="text-white uppercase">
                   Home
                 </Link>
-                <Popover className="relative group">
-                  <PopoverButton className="flex items-center gap-x-1 text-white focus:outline-none uppercase">
-                    Services
-                    <ChevronDownIcon className="h-5 w-5" />
-                  </PopoverButton>
 
-                  <PopoverPanel className="absolute top-12 z-10 mt-3 md:w-[40vh] overflow-hidden bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 px-3 py-3">
-                      {premiumservices.map((item) => (
-                        <div
-                          key={item.name}
-                          className="flex flex-col items-center justify-center py-2 px-2 bg-white text-black hover:text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-secondary"
-                        >
-                          {item.href ? (
-                            <Link
-                              href={item.href}
-                              className="text-md font-semibold text-center transition-colors duration-200"
+                <Popover className="relative">
+                  {({ open }) => (
+                    <>
+                      <Popover.Button className="flex items-center gap-x-1 text-white focus:outline-none uppercase">
+                        Services
+                        <ChevronDownIcon
+                          className={`h-5 w-5 transition-transform duration-300 ${
+                            open ? "rotate-180" : ""
+                          }`}
+                        />
+                      </Popover.Button>
+
+                      <Popover.Panel className="absolute top-12 z-10 mt-3 md:w-[40vh] overflow-hidden bg-black/90 backdrop-blur-lg ring-1 shadow-lg ring-gray-900/5 rounded-lg">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 px-3 py-3">
+                          {premiumservices.map((item) => (
+                            <div
+                              key={item.name}
+                              className="flex flex-col items-center justify-center py-2 px-2 bg-white text-black hover:text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-secondary rounded-md"
                             >
-                              {item.name}
-                              <p className="mt-2 text-center text-xs">
-                                {item.description}
-                              </p>
-                            </Link>
-                          ) : (
-                            <div className="text-xl font-semibold text-center opacity-60 cursor-not-allowed">
-                              {item.name}
-                              <p className="mt-2 text-center text-sm">
-                                {item.description}
-                              </p>
+                              {item.href ? (
+                                <Link
+                                  href={item.href}
+                                  className="text-md font-semibold text-center transition-colors duration-200"
+                                >
+                                  {item.name}
+                                  <p className="mt-2 text-center text-xs">
+                                    {item.description}
+                                  </p>
+                                </Link>
+                              ) : (
+                                <div className="text-xl font-semibold text-center opacity-60 cursor-not-allowed">
+                                  {item.name}
+                                  <p className="mt-2 text-center text-sm">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              )}
                             </div>
-                          )}
+                          ))}
                         </div>
-                      ))}
-                    </div>
 
-                    {callsToAction.length > 0 && (
-                      <div className="grid grid-cols-2 divide-x divide-gray-200 bg-white/50 backdrop-blur-sm">
-                        {callsToAction.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className="flex items-center text-center text-black hover:text-white justify-center gap-x-3 p-1 text-md font-semibold hover:bg-black transition-colors duration-200"
-                          >
-                            {/* <item.icon
-              className="w-8 h-8 text-white"
-              aria-hidden="true"
-            /> */}
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </PopoverPanel>
+                        {callsToAction.length > 0 && (
+                          <div className="grid grid-cols-2 divide-x divide-gray-200 bg-white/50 backdrop-blur-sm">
+                            {callsToAction.map((item) => (
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                className="flex items-center text-center text-black hover:text-white justify-center gap-x-3 p-1 text-md font-semibold hover:bg-black transition-colors duration-200"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </Popover.Panel>
+                    </>
+                  )}
                 </Popover>
-
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -223,7 +209,7 @@ export default function Header() {
             <div className="logo">
               <Link href="/" className="flex items-center">
                 <img
-                  src="/logo1.png"
+                  src="/images/logo1.png"
                   alt="TAW Designs Logo"
                   className="w-auto h-16 md:h-24"
                 />
@@ -241,7 +227,7 @@ export default function Header() {
           <nav className="off-canvas__nav">
             <PopoverGroup className=" lg:gap-x-12 text-lg font-medium">
               {navigationmobile.map((item) => (
-                <ul className="space-y-6">
+                <ul key={item.name} className="space-y-6">
                   <li className="uppercase text-md pb-5">
                     <Link
                       key={item.name}
@@ -280,19 +266,6 @@ export default function Header() {
             </PopoverGroup>
           </nav>
         </div>
-        {/* <div className="off-canvas__footer absolute bottom-0 w-full p-8 bg-black">
-          <div className="off-canvas__footer--inner flex justify-end">
-            <div className="logo-sister w-full">
-              <Link
-                href="/sister"
-                className="text-[#463cc4] text-2xl w-full justify-between flex items-center"
-              >
-                <div><ArrowBigRight className="w-8 h-8"/></div>
-                <div>INTERIOR DESIGNS</div>
-              </Link>
-            </div>
-          </div>
-        </div> */}
       </div>
     </header>
   );

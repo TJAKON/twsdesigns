@@ -19,13 +19,11 @@ const Section = ({ title, children, image, reverse }) => (
       <div className="text-gray-600 text-lg leading-relaxed">{children}</div>
     </div>
     {image && (
-      <div className="md:w-1/2">
-        <Image
+      <div className=" w-full md:w-1/2">
+        <img
           src={image}
           alt={title}
-          width={600}
-          height={400}
-          className=" h-[300px] md:h-[600px] object-cover shadow-xl border border-gray-200"
+          className=" w-full h-[300px] md:h-[600px] object-cover shadow-xl border border-gray-200"
         />
       </div>
     )}
@@ -45,16 +43,14 @@ export default function Page() {
           <h1 className="text-4xl font-bold">SERVICES</h1>
           <p className="text-sm mt-2">HOME / SERVICES / TAW GREENS</p>
           <motion.div
-            className="mt-8 h-72 w-full rounded-lg overflow-hidden"
+            className="mt-8 h-72 w-full overflow-hidden"
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Image
-              src={"/services/8.jpg"}
+            <img
+              src={"/images/8.jpg"}
               alt={"test"}
-              width={1000}
-              height={200}
               className=" w-full h-[300px] md:h-[400px] object-cover "
             />
           </motion.div>
@@ -76,7 +72,7 @@ export default function Page() {
           {/* Sections */}
           <Section
             title="Introduction to Green Building Concept"
-            image="/services/16.jpg"
+            image="/images/16.jpg"
           >
             The design, construction, and operation of environmentally conscious
             and resource-efficient structures are referred to as the{" "}
@@ -86,7 +82,7 @@ export default function Page() {
             working environments.
           </Section>
 
-          <Section title="Why TAW Designs?" image="/services/21.jpg" reverse>
+          <Section title="Why TAW Designs?" image="/images/21.jpg" reverse>
             TAW Designs Pvt. Ltd. is one of the leading green architecture firms
             in Pune and Mumbai, supporting the Green Building Concept by
             designing environmentally responsible, energy-efficient, and
@@ -99,7 +95,7 @@ export default function Page() {
             eco-friendly designs.
           </Section>
 
-          <Section title="Benefits of Green Buildings" image="/services/20.jpg">
+          <Section title="Benefits of Green Buildings" image="/images/20.jpg">
             <ul className="list-disc list-inside space-y-2 text-gray-700 text-lg">
               <li>Lower operating costs (energy & water savings)</li>
               <li>Healthier living/working spaces (better air quality)</li>
@@ -126,32 +122,32 @@ export default function Page() {
               {
                 title: "Energy Efficiency",
                 desc: "Implementing smart technologies and systems into the design of energy-efficient buildings to cut down on energy use and operating expenses.",
-                img: "/help1.jpeg",
+                img: "/images/help1.jpeg",
               },
               {
                 title: "Water Conservation",
                 desc: "Water-saving measures like rainwater harvesting and low-flow fixtures promote sustainable living.",
-                img: "/help1.jpeg",
+                img: "/images/help1.jpeg",
               },
               {
                 title: "Sustainable Materials",
                 desc: "Use of locally produced, recycled, and renewable building materials to reduce environmental impact.",
-                img: "/help1.jpeg",
+                img: "/images/help1.jpeg",
               },
               {
                 title: "Indoor Environmental Quality (IEQ)",
                 desc: "Ventilation systems, natural lighting, and air quality improvements create healthier living spaces.",
-                img: "/help1.jpeg",
+                img: "/images/help1.jpeg",
               },
               {
                 title: "Waste Reduction & Recycling",
                 desc: "Implementing construction waste management and recycling practices to reduce landfill load.",
-                img: "/help1.jpeg",
+                img: "/images/help1.jpeg",
               },
               {
                 title: "Smart Building Design",
                 desc: "Automation and smart energy systems ensure efficient building operations.",
-                img: "/help1.jpeg",
+                img: "/images/help1.jpeg",
               },
             ].map(({ title, desc, img }) => (
               <motion.div
@@ -162,13 +158,6 @@ export default function Page() {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                {/* <Image
-                  src={img}
-                  alt={title}
-                  width={500}
-                  height={300}
-                  className=" h-[300px] md:h-[450px] object-cover mb-4"
-                /> */}
                 <h3 className="text-xl font-bold text-green-600 mb-2">
                   {title}
                 </h3>

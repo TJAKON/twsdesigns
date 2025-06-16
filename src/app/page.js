@@ -1,3 +1,4 @@
+"use client";
 import Hero from "@/components/sections/Hero";
 import "../styles/globals.css";
 import SplitScreen from "@/components/sections/SplitScreen";

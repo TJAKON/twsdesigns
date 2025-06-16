@@ -20,13 +20,11 @@ const Section = ({ title, children, image, reverse }) => (
       <div className="text-[#F8F8F8] text-lg leading-relaxed">{children}</div>
     </div>
     {image && (
-      <div className="md:w-1/2">
-        <Image
+      <div className=" w-full md:w-1/2">
+        <img
           src={image}
           alt={title}
-          width={600}
-          height={200}
-          className=" h-[300px] md:h-[600px] object-cover shadow-xl border border-[#C0C0C0]"
+          className=" w-full h-[300px] md:h-[600px] object-cover shadow-xl border border-[#C0C0C0]"
         />
       </div>
     )}
@@ -50,17 +48,15 @@ export default function Page() {
             HOME / SERVICES / TAW PROJECT MANAGEMENT SERVICE
           </p>
           <motion.div
-            className="mt-8 h-72 w-full rounded-lg overflow-hidden"
+            className="mt-8 h-72 w-full overflow-hidden"
             // style={{ backgroundColor: "#1F1F1F" }}
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Image
-              src={"/Images/ProjectbackgroundImage.jpg"}
+            <img
+              src={"/images/ProjectbackgroundImage.jpg"}
               alt={"test"}
-              width={1000}
-              height={200}
               className=" w-full h-[300px] md:h-[400px] object-cover "
             />
           </motion.div>
@@ -84,7 +80,7 @@ export default function Page() {
 
           <Section
             title="Why TAW Designs for Project Management?"
-            image="/Images/pm1.jpg"
+            image="/images/pm1.jpg"
           >
             With a team of experienced engineers and architects, TAW Designs
             Pvt. Ltd. provides{" "}
@@ -95,7 +91,7 @@ export default function Page() {
             regulatory compliance.
           </Section>
 
-          <Section title="Services We Offer" image="/Images/pm2.jpg" reverse>
+          <Section title="Services We Offer" image="/images/pm2.jpg" reverse>
             <ul className="list-disc list-inside space-y-2 text-[#F8F8F8] text-lg">
               <li>Project Execution</li>
               <li>
@@ -111,7 +107,7 @@ export default function Page() {
 
           <Section
             title="Our Approach to Sustainable & Compliant Development"
-           image="/services/2.jpg"
+           image="/images/2.jpg"
           >
             We specialize in delivering{" "}
             <strong>timely and economical construction solutions</strong> with a
